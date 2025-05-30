@@ -7,14 +7,36 @@ import { Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import IconCheck from '~icons/tabler/check'
 
+/**
+ * 词典章节按钮
+ * @returns 词典章节按钮
+ */
 export const DictChapterButton = () => {
+  /**
+   * 当前词典信息
+   */
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  /**
+   * 当前章节
+   */
   const [currentChapter, setCurrentChapter] = useAtom(currentChapterAtom)
+  /**
+   * 章节数量
+   */
   const chapterCount = currentDictInfo.chapterCount
+  /**
+   * 是否为复习模式
+   */
   const isReviewMode = useAtomValue(isReviewModeAtom)
 
+  /**
+   * 处理键盘事件
+   * @param event 事件
+   */
   const handleKeyDown: React.KeyboardEventHandler<HTMLButtonElement> = (event) => {
+    // 如果事件为空格键，则阻止默认行为
     if (event.key === ' ') {
+      // 阻止默认行为
       event.preventDefault()
     }
   }

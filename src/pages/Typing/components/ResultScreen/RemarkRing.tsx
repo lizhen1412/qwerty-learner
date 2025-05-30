@@ -2,8 +2,13 @@ import clamp from '@/utils/clamp'
 import classNames from 'classnames'
 import { useMemo } from 'react'
 
+/**
+ * 备注环的属性
+ */
 export type RemarkRingProps = {
+  /** 备注 */
   remark: string
+  /** 标题 */
   caption: string
   /**
    * `null` if the percentage is not appliable.
@@ -16,14 +21,35 @@ export type RemarkRingProps = {
   size?: number
 }
 
+/**
+ * 根字体大小
+ */
 const rootFontSize = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue('font-size'))
 
+/**
+ * 备注环
+ * 用于显示打字结果的备注和标题
+ * @param param0 备注环的属性
+ * @returns 备注环
+ */
 export default function RemarkRing({ remark, caption, percentage = null, size = 7 }: RemarkRingProps) {
+  /**
+   * 剪切路径
+   */
   const clipPath = useMemo((): string | undefined => {
+    /**
+     * 如果百分比为空
+     */
     if (percentage === null) {
       return undefined
     }
+    /**
+     * 限制百分比
+     */
     const clamped = clamp(percentage, 0, 100)
+    /**
+     * 如果百分比为100
+     */
     if (clamped === 100) {
       return undefined
     }

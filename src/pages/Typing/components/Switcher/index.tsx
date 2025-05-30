@@ -17,20 +17,40 @@ import IconSun from '~icons/heroicons/sun-solid'
 import IconLanguage from '~icons/tabler/language'
 import IconLanguageOff from '~icons/tabler/language-off'
 
+/**
+ * 切换器
+ * 用于切换打字练习的设置
+ * @returns 切换器
+ */
 export default function Switcher() {
+  /**
+   * 是否打开深色模式
+   */
   const [isOpenDarkMode, setIsOpenDarkMode] = useAtom(isOpenDarkModeAtom)
+  /**
+   * 打字上下文
+   */
   const { state, dispatch } = useContext(TypingContext) ?? {}
 
+  /**
+   * 切换深色模式
+   */
   const changeDarkModeState = () => {
     setIsOpenDarkMode((old) => !old)
   }
 
+  /**
+   * 切换释义显示
+   */
   const changeTransVisibleState = () => {
     if (dispatch) {
       dispatch({ type: TypingStateActionType.TOGGLE_TRANS_VISIBLE })
     }
   }
 
+  /**
+   * 使用热键
+   */
   useHotkeys(
     'ctrl+shift+v',
     () => {

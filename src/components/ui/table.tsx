@@ -2,6 +2,11 @@
 import { cn } from '@/utils/ui'
 import * as React from 'react'
 
+/**
+ * 表格组件
+ * @param param0
+ * @returns
+ */
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(({ className, ...props }, ref) => (
   <div className="relative h-full w-full overflow-auto">
     <table ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
@@ -9,16 +14,31 @@ const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableE
 ))
 Table.displayName = 'Table'
 
+/**
+ * 表格头部
+ * @param param0
+ * @returns
+ */
 const TableHeader = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(
   ({ className, ...props }, ref) => <thead ref={ref} className={cn('[&_tr]:border-b', className)} {...props} />,
 )
 TableHeader.displayName = 'TableHeader'
 
+/**
+ * 表格主体
+ * @param param0
+ * @returns
+ */
 const TableBody = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(
   ({ className, ...props }, ref) => <tbody ref={ref} className={cn('[&_tr:last-child]:border-0', className)} {...props} />,
 )
 TableBody.displayName = 'TableBody'
 
+/**
+ * 表格底部
+ * @param param0
+ * @returns
+ */
 const TableFooter = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(
   ({ className, ...props }, ref) => (
     <tfoot
@@ -30,6 +50,11 @@ const TableFooter = React.forwardRef<HTMLTableSectionElement, React.HTMLAttribut
 )
 TableFooter.displayName = 'TableFooter'
 
+/**
+ * 表格行
+ * @param param0
+ * @returns
+ */
 const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTMLTableRowElement>>(({ className, ...props }, ref) => (
   <tr
     ref={ref}
@@ -42,6 +67,11 @@ const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTML
 ))
 TableRow.displayName = 'TableRow'
 
+/**
+ * 表格头
+ * @param param0
+ * @returns
+ */
 const TableHead = React.forwardRef<HTMLTableCellElement, React.ThHTMLAttributes<HTMLTableCellElement>>(({ className, ...props }, ref) => (
   <th
     ref={ref}
@@ -54,11 +84,21 @@ const TableHead = React.forwardRef<HTMLTableCellElement, React.ThHTMLAttributes<
 ))
 TableHead.displayName = 'TableHead'
 
+/**
+ * 表格单元格
+ * @param param0
+ * @returns
+ */
 const TableCell = React.forwardRef<HTMLTableCellElement, React.TdHTMLAttributes<HTMLTableCellElement>>(({ className, ...props }, ref) => (
   <td ref={ref} className={cn('p-4 align-middle [&:has([role=checkbox])]:pr-0', className)} {...props} />
 ))
 TableCell.displayName = 'TableCell'
 
+/**
+ * 表格标题
+ * @param param0
+ * @returns
+ */
 const TableCaption = React.forwardRef<HTMLTableCaptionElement, React.HTMLAttributes<HTMLTableCaptionElement>>(
   ({ className, ...props }, ref) => (
     <caption ref={ref} className={cn('mt-4 text-sm text-slate-500 dark:text-slate-400', className)} {...props} />
@@ -66,4 +106,8 @@ const TableCaption = React.forwardRef<HTMLTableCaptionElement, React.HTMLAttribu
 )
 TableCaption.displayName = 'TableCaption'
 
+/**
+ * 表格组件
+ * @returns 表格组件
+ */
 export { Table, TableHeader, TableBody, TableFooter, TableHead, TableRow, TableCell, TableCaption }

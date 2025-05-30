@@ -10,56 +10,108 @@ import speedImg from '@/assets/mobile/detail/speed.png'
 import type React from 'react'
 import { useEffect, useRef, useState } from 'react'
 
+/**
+ * 详情
+ */
 const detail = [
   {
-    title: '音标显示与发音功能',
-    description: '帮助用户同时记忆单词的读音与音标',
-    img: phoneticImg,
+    title: '音标显示与发音功能', // 标题
+    description: '帮助用户同时记忆单词的读音与音标', // 描述
+    img: phoneticImg, // 图片
   },
   {
-    title: '默写模式',
-    description: '每章结束后可选择默写，巩固所学单词',
-    img: dictationImg,
+    title: '默写模式', // 标题
+    description: '每章结束后可选择默写，巩固所学单词', // 描述
+    img: dictationImg, // 图片
   },
   {
-    title: '实时反馈',
-    description: '显示输入速度和正确率，量化技能提升',
-    img: speedImg,
+    title: '实时反馈', // 标题
+    description: '显示输入速度和正确率，量化技能提升', // 描述
+    img: speedImg, // 图片
   },
   {
-    title: '为程序员定制',
-    description: '内置编程相关词库，提高工作效率',
-    img: codeImg,
+    title: '为程序员定制', // 标题
+    description: '内置编程相关词库，提高工作效率', // 描述
+    img: codeImg, // 图片
   },
 ]
 
+/**
+ * 移动端页面
+ * @returns 移动端页面
+ */
 const MobilePage: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0) //
   const totalSlides = 3 // 轮播图的总数量
   const containerRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
 
+  /**
+   * 定时器
+   */
   useEffect(() => {
+    /**
+     * 定时器
+     */
     const timer = setInterval(() => {
+      /**
+       * 设置当前幻灯片
+       */
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides)
     }, 3000)
 
+    /**
+     * 清除定时器
+     */
     return () => clearInterval(timer)
   }, [])
 
+  /**
+   * 轮播图
+   */
   useEffect(() => {
+    /**
+     * 轮播图容器
+     */
     if (containerRef.current) {
+      /**
+       * 轮播图容器
+       */
       const container = containerRef.current
+      /**
+       * 轮播图宽度
+       */
       const slideWidth = container.offsetWidth
 
+      /**
+       * 如果当前幻灯片为 0，则设置轮播图容器为初始状态
+       */
       if (currentSlide === 0) {
+        /**
+         * 设置轮播图容器为初始状态
+         */
         container.style.transition = 'none'
+        /**
+         * 设置轮播图容器为初始状态
+         */
         container.style.transform = `translateX(0)`
+        /**
+         * 设置轮播图容器为初始状态
+         */
         setTimeout(() => {
+          /**
+           * 设置轮播图容器为初始状态
+           */
           container.style.transition = 'transform 0.5s ease'
+          /**
+           * 设置轮播图容器为初始状态
+           */
           container.style.transform = `translateX(-${slideWidth}px)`
         }, 50)
       } else {
+        /**
+         * 设置轮播图容器为初始状态
+         */
         container.style.transform = `translateX(-${currentSlide * slideWidth}px)`
       }
     }

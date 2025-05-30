@@ -11,24 +11,55 @@ import * as Progress from '@radix-ui/react-progress'
 import { useAtomValue } from 'jotai'
 import { useMemo, useRef } from 'react'
 
+/**
+ * 词典组件
+ * @param dictionary 词典
+ */
 interface Props {
-  dictionary: Dictionary
+  dictionary: Dictionary // 词典
 }
 
+/**
+ * 词典组件
+ * @param dictionary 词典
+ * @returns 词典组件
+ */
 export default function DictionaryComponent({ dictionary }: Props) {
+  /**
+   * 当前词典 ID
+   */
   const currentDictID = useAtomValue(currentDictIdAtom)
 
   const divRef = useRef<HTMLDivElement>(null)
+
   const entry = useIntersectionObserver(divRef, {})
+  /**
+   * 是否可见
+   */
   const isVisible = !!entry?.isIntersecting
+  /**
+   * 词典统计
+   */
   const dictStats = useDictStats(dictionary.id, isVisible)
+  /**
+   * 章节数量
+   */
   const chapterCount = useMemo(() => calcChapterCount(dictionary.length), [dictionary.length])
+  /**
+   * 是否选中
+   */
   const isSelected = currentDictID === dictionary.id
+  /**
+   * 进度
+   */
   const progress = useMemo(
     () => (dictStats ? Math.ceil((dictStats.exercisedChapterCount / chapterCount) * 100) : 0),
     [dictStats, chapterCount],
   )
 
+  /**
+   * 渲染
+   */
   return (
     <Dialog>
       <DialogTrigger asChild>

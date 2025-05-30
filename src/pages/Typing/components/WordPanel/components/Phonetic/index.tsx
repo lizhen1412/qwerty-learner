@@ -2,12 +2,30 @@ import { isTextSelectableAtom, phoneticConfigAtom } from '@/store'
 import type { Word, WordWithIndex } from '@/typings'
 import { useAtomValue } from 'jotai'
 
+/**
+ * 发音
+ * 用于显示发音
+ * @param word 单词
+ * @returns 发音
+ */
 export type PhoneticProps = {
   word: WordWithIndex | Word
 }
 
+/**
+ * 发音
+ * 用于显示发音
+ * @param word 单词
+ * @returns 发音
+ */
 function Phonetic({ word }: PhoneticProps) {
+  /**
+   * 发音配置
+   */
   const phoneticConfig = useAtomValue(phoneticConfigAtom)
+  /**
+   * 是否可选择文本
+   */
   const isTextSelectable = useAtomValue(isTextSelectableAtom)
 
   return (

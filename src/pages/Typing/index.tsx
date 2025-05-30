@@ -24,18 +24,31 @@ import type React from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { useImmerReducer } from 'use-immer'
 
+/**
+ * 打字练习页面
+ */
 const App: React.FC = () => {
+  // 使用immerReducer管理状态
   const [state, dispatch] = useImmerReducer(typingReducer, structuredClone(initialState))
+  // 是否正在加载
   const [isLoading, setIsLoading] = useState<boolean>(true)
+  // 单词列表
   const { words } = useWordList()
 
+  // 当前词典ID
   const [currentDictId, setCurrentDictId] = useAtom(currentDictIdAtom)
+  // 设置当前章节
   const setCurrentChapter = useSetAtom(currentChapterAtom)
+  // 随机配置
   const randomConfig = useAtomValue(randomConfigAtom)
+  // 章节日志上传器
   const chapterLogUploader = useMixPanelChapterLogUploader(state)
+  // 保存章节记录
   const saveChapterRecord = useSaveChapterRecord()
 
+  // 复习模式信息
   const reviewModeInfo = useAtomValue(reviewModeInfoAtom)
+  // 是否是复习模式
   const isReviewMode = useAtomValue(isReviewModeAtom)
 
   useEffect(() => {

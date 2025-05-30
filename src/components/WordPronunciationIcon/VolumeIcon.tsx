@@ -1,3 +1,8 @@
+/**
+ * 音量高图标
+ * @param param0
+ * @returns
+ */
 export const VolumeHighIcon = ({ className }: { className?: string }) => {
   return (
     <svg className={`prefix__icon ${className}`} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -7,6 +12,11 @@ export const VolumeHighIcon = ({ className }: { className?: string }) => {
   )
 }
 
+/**
+ * 音量图标
+ * @param param0
+ * @returns
+ */
 export const VolumeIcon = ({ className }: { className?: string }) => {
   return (
     <svg className={`prefix__icon ${className}`} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -15,6 +25,11 @@ export const VolumeIcon = ({ className }: { className?: string }) => {
   )
 }
 
+/**
+ * 音量低图标
+ * @param param0
+ * @returns
+ */
 export const VolumeLowIcon = ({ className }: { className?: string }) => {
   return (
     <svg className={`prefix__icon ${className}`} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -23,6 +38,11 @@ export const VolumeLowIcon = ({ className }: { className?: string }) => {
   )
 }
 
+/**
+ * 音量中图标
+ * @param param0
+ * @returns
+ */
 export const VolumeMediumIcon = ({ className }: { className?: string }) => {
   return (
     <svg className={`prefix__icon ${className}`} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">

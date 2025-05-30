@@ -7,14 +7,26 @@ import ActivityCalendar from 'react-activity-calendar'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 
+/**
+ * 热力图组件属性
+ */
 interface HeatmapChartsProps {
   title: string
   data: Activity[]
 }
 
+/**
+ * 热力图组件
+ * @param param0
+ * @returns
+ */
 const HeatmapCharts: FC<HeatmapChartsProps> = ({ data, title }) => {
   const [isOpenDarkMode] = useAtom(isOpenDarkModeAtom)
 
+  /**
+   * 返回热力图组件
+   * @returns 热力图组件
+   */
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="text-center text-xl font-bold text-gray-600	dark:text-white">{title}</div>

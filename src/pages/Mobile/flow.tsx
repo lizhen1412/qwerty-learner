@@ -1,6 +1,13 @@
 import type React from 'react'
 
+/**
+ * 流动
+ * @returns 流动
+ */
 const Flow: React.FC = () => {
+  /**
+   * 波浪样式
+   */
   const waveStyle = {
     animation: 'move 3s linear infinite both',
   }

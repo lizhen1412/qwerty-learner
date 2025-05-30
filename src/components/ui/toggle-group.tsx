@@ -4,11 +4,19 @@ import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group'
 import type { VariantProps } from 'class-variance-authority'
 import * as React from 'react'
 
+/**
+ * 切换组上下文
+ */
 const ToggleGroupContext = React.createContext<VariantProps<typeof toggleVariants>>({
   size: 'default',
   variant: 'default',
 })
 
+/**
+ * 切换组组件
+ * @param param0
+ * @returns
+ */
 const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> & VariantProps<typeof toggleVariants>
@@ -18,8 +26,16 @@ const ToggleGroup = React.forwardRef<
   </ToggleGroupPrimitive.Root>
 ))
 
+/**
+ * 切换组组件
+ * @returns 切换组组件
+ */
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName
 
+/**
+ * 切换组项组件
+ * @returns 切换组项组件
+ */
 const ToggleGroupItem = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> & VariantProps<typeof toggleVariants>

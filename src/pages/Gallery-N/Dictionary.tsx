@@ -1,11 +1,22 @@
 import type { Dictionary } from '@/typings'
 import * as Progress from '@radix-ui/react-progress'
 
+/**
+ * 词典组件
+ * @param dictionary 词典
+ * @param onClick 点击事件
+ */
 interface Props {
-  dictionary: Dictionary
-  onClick?: () => void
+  dictionary: Dictionary // 词典
+  onClick?: () => void // 点击事件
 }
 
+/**
+ * 词典组件
+ * @param dictionary 词典
+ * @param onClick 点击事件
+ * @returns 词典组件
+ */
 function DictionaryComponent({ dictionary, onClick }: Props) {
   return (
     <div className="flex h-40 w-80 items-center justify-center" role="button" onClick={onClick} title="选择词典">

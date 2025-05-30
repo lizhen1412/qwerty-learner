@@ -3,12 +3,28 @@ import { cn } from '@/utils/ui'
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 import * as React from 'react'
 
+/**
+ * 工具提示提供者
+ * @returns 工具提示提供者
+ */
 const TooltipProvider = TooltipPrimitive.Provider
 
+/**
+ * 工具提示
+ * @returns 工具提示
+ */
 const Tooltip = TooltipPrimitive.Root
 
+/**
+ * 工具提示触发器
+ * @returns 工具提示触发器
+ */
 const TooltipTrigger = TooltipPrimitive.Trigger
 
+/**
+ * 工具提示内容
+ * @returns 工具提示内容
+ */
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
@@ -23,6 +39,10 @@ const TooltipContent = React.forwardRef<
     {...props}
   />
 ))
+/**
+ * 工具提示内容
+ * @returns 工具提示内容
+ */
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }

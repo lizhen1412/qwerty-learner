@@ -2,14 +2,33 @@ import InfoPanel from '@/components/InfoPanel'
 import { useCallback, useState } from 'react'
 import IconBook2 from '~icons/tabler/book-2'
 
+/**
+ * 词典请求
+ * @returns 词典请求
+ */
 export default function DictRequest() {
+  /**
+   * 是否显示面板
+   */
   const [showPanel, setShowPanel] = useState(false)
 
+  /**
+   * 打开面板
+   */
   const onOpenPanel = useCallback(() => {
+    /**
+     * 设置是否显示面板（打开）
+     */
     setShowPanel(true)
   }, [])
 
+  /**
+   * 关闭面板
+   */
   const onClosePanel = useCallback(() => {
+    /**
+     * 设置是否显示面板（关闭）
+     */
     setShowPanel(false)
   }, [])
 

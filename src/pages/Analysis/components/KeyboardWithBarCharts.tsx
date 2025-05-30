@@ -11,11 +11,25 @@ import { useAtom } from 'jotai'
 import type { FC } from 'react'
 import { useEffect, useRef } from 'react'
 
+/**
+ * 注册 echarts 组件
+ */
 echarts.use([BarChart, CanvasRenderer, GeoComponent, MapChart, ToolboxComponent, TooltipComponent, UniversalTransition, VisualMapComponent])
+
+/**
+ * 注册 echarts 主题
+ */
 echarts.registerTheme('purple', purple)
+
+/**
+ * 注册 echarts 地图
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 echarts.registerMap('Keyboard', Keyboard as any)
 
+/**
+ * 键盘数据
+ */
 const keyboardData = [
   { name: 'Q', value: 0 },
   { name: 'W', value: 0 },
@@ -45,6 +59,9 @@ const keyboardData = [
   { name: 'M', value: 0 },
 ]
 
+/**
+ * 键盘柱状图组件属性
+ */
 interface KeyboardWithBarChartsProps {
   title: string
   data: { name: string; value: number }[]
@@ -52,13 +69,27 @@ interface KeyboardWithBarChartsProps {
   suffix?: string
 }
 
+/**
+ * 键盘柱状图组件
+ * @param param0
+ * @returns
+ */
 const KeyboardWithBarCharts: FC<KeyboardWithBarChartsProps> = ({ data, title, suffix, name }) => {
   const [isOpenDarkMode] = useAtom(isOpenDarkModeAtom)
 
+  /**
+   * 图表引用
+   */
   const chartRef = useRef<HTMLDivElement>(null)
 
+  /**
+   * 窗口大小
+   */
   const { width, height } = useWindowSize()
 
+  /**
+   * 使用 useEffect 监听数据变化
+   */
   useEffect(() => {
     if (!chartRef.current || !data.length) return
 
@@ -69,11 +100,17 @@ const KeyboardWithBarCharts: FC<KeyboardWithBarChartsProps> = ({ data, title, su
       })
       .sort((a, b) => b.value - a.value)
 
+    /**
+     * 图表实例
+     */
     let chart = echarts.getInstanceByDom(chartRef.current)
     chart?.dispose()
 
     chart = echarts.init(chartRef.current, isOpenDarkMode ? 'purple' : 'light')
 
+    /**
+     * 地图选项
+     */
     const mapOption = {
       tooltip: {
         trigger: 'item',
@@ -121,6 +158,9 @@ const KeyboardWithBarCharts: FC<KeyboardWithBarChartsProps> = ({ data, title, su
       ],
     }
 
+    /**
+     * 柱状图选项
+     */
     const barOption = {
       tooltip: { trigger: 'axis' },
       toolbox: {
@@ -164,12 +204,19 @@ const KeyboardWithBarCharts: FC<KeyboardWithBarChartsProps> = ({ data, title, su
     chart.setOption(mapOption)
   }, [data, title, suffix, name, isOpenDarkMode])
 
+  /**
+   * 使用 useEffect 监听窗口大小变化
+   */
   useEffect(() => {
     if (!chartRef.current) return
     const chart = echarts.getInstanceByDom(chartRef.current)
     chart?.resize()
   }, [width, height, chartRef])
 
+  /**
+   * 返回键盘柱状图组件
+   * @returns 键盘柱状图组件
+   */
   return (
     <div className="flex h-full flex-col">
       <div className="text-center text-xl font-bold text-gray-600	dark:text-white">{title}</div>

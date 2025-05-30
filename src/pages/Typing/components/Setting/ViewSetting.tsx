@@ -6,31 +6,54 @@ import * as Slider from '@radix-ui/react-slider'
 import { useAtom } from 'jotai'
 import { useCallback } from 'react'
 
+/**
+ * 视图设置
+ * 用于设置打字练习的视图
+ * @returns 视图设置
+ */
 export default function ViewSetting() {
+  /**
+   * 字体大小配置
+   */
   const [fontSizeConfig, setFontsizeConfig] = useAtom(fontSizeConfigAtom)
 
+  /**
+   * 切换外语字体大小
+   */
   const onChangeForeignFontSize = useCallback(
+    /**
+     * 切换外语字体大小
+     */
     (value: [number]) => {
       setFontsizeConfig((prev) => ({
-        ...prev,
-        foreignFont: value[0],
+        ...prev, // 设置字体大小配置
+        foreignFont: value[0], // 设置外语字体大小
       }))
     },
     [setFontsizeConfig],
   )
 
+  /**
+   * 切换中文字体大小
+   */
   const onChangeTranslateFontSize = useCallback(
+    /**
+     * 切换中文字体大小
+     */
     (value: [number]) => {
       setFontsizeConfig((prev) => ({
-        ...prev,
-        translateFont: value[0],
+        ...prev, // 设置字体大小配置
+        translateFont: value[0], // 设置中文字体大小
       }))
     },
     [setFontsizeConfig],
   )
 
+  /**
+   * 重置字体大小
+   */
   const onResetFontSize = useCallback(() => {
-    setFontsizeConfig({ ...defaultFontSizeConfig })
+    setFontsizeConfig({ ...defaultFontSizeConfig }) // 重置字体大小配置
   }, [setFontsizeConfig])
 
   return (

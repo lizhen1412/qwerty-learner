@@ -13,17 +13,40 @@ import IconDatabaseCog from '~icons/tabler/database-cog'
 import IconEar from '~icons/tabler/ear'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 设置
+ * 用于设置打字练习的选项
+ * @returns 设置
+ */
 export default function Setting() {
+  /**
+   * 是否打开设置
+   */
   const [isOpen, setIsOpen] = useState(false)
+  /**
+   * 打字上下文
+   */
   const { dispatch } = useContext(TypingContext) ?? {}
 
+  /**
+   * 关闭对话框
+   */
   function closeModal() {
     setIsOpen(false)
   }
 
+  /**
+   * 打开对话框
+   */
   function openModal() {
     setIsOpen(true)
+    /**
+     * 如果打字上下文存在
+     */
     if (dispatch) {
+      /**
+       * 设置打字状态
+       */
       dispatch({ type: TypingStateActionType.SET_IS_TYPING, payload: false })
     }
   }

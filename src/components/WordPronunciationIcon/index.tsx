@@ -4,6 +4,11 @@ import type { Word } from '@/typings'
 import { useCallback, useEffect, useImperativeHandle } from 'react'
 import React from 'react'
 
+/**
+ * 单词发音图标
+ * @param param0
+ * @returns
+ */
 export const WordPronunciationIcon = React.forwardRef<
   WordPronunciationIconRef,
   { word: Word; lang: string; className?: string; iconClassName?: string }
@@ -21,17 +26,27 @@ export const WordPronunciationIcon = React.forwardRef<
       return word.name
     }
   }
+  // 发音
   const { play, stop, isPlaying } = usePronunciationSound(currentWord())
 
+  /**
+   * 播放声音
+   */
   const playSound = useCallback(() => {
     stop()
     play()
   }, [play, stop])
 
+  /**
+   * 停止发音
+   */
   useEffect(() => {
     return stop
   }, [word, stop])
 
+  /**
+   * 暴露发音方法
+   */
   useImperativeHandle(
     ref,
     () => ({
@@ -40,6 +55,10 @@ export const WordPronunciationIcon = React.forwardRef<
     [playSound],
   )
 
+  /**
+   * 返回单词发音图标
+   * @returns 单词发音图标
+   */
   return (
     <SoundIcon
       animated={isPlaying}
@@ -52,6 +71,9 @@ export const WordPronunciationIcon = React.forwardRef<
 
 WordPronunciationIcon.displayName = 'WordPronunciationIcon'
 
+/**
+ * 单词发音图标引用
+ */
 export type WordPronunciationIconRef = {
   play: () => void
 }

@@ -1,5 +1,10 @@
 import type { AmountType } from '..'
 
+/**
+ * 金额组件
+ * @param param0
+ * @returns
+ */
 export const Amount = ({
   amount,
   onClick,

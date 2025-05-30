@@ -6,29 +6,60 @@ import { useAtomValue } from 'jotai'
 import { useCallback, useContext, useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
 
+/**
+ * 开始按钮
+ * 用于开始打字练习
+ * @param isLoading 是否加载中
+ * @returns 开始按钮
+ */
 export default function StartButton({ isLoading }: { isLoading: boolean }) {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
+  /**
+   * 随机配置
+   */
   const randomConfig = useAtomValue(randomConfigAtom)
 
+  /**
+   * 切换打字状态
+   */
   const onToggleIsTyping = useCallback(() => {
     !isLoading && dispatch({ type: TypingStateActionType.TOGGLE_IS_TYPING })
   }, [isLoading, dispatch])
 
+  /**
+   * 重新开始
+   */
   const onClickRestart = useCallback(() => {
     dispatch({ type: TypingStateActionType.REPEAT_CHAPTER, shouldShuffle: randomConfig.isOpen })
   }, [dispatch, randomConfig.isOpen])
 
+  /**
+   * 使用热键
+   */
   useHotkeys('enter', onToggleIsTyping, { enableOnFormTags: true, preventDefault: true }, [onToggleIsTyping])
 
+  /**
+   * 是否显示重新开始按钮
+   */
   const [isShowReStartButton, setIsShowReStartButton] = useState(false)
+
+  /**
+   * 使用浮动
+   */
   const { refs, context } = useFloating({
-    open: isShowReStartButton,
-    onOpenChange: setIsShowReStartButton,
-    whileElementsMounted: autoUpdate,
-    middleware: [offset(5)],
+    open: isShowReStartButton, // 是否显示重新开始按钮
+    onOpenChange: setIsShowReStartButton, // 设置是否显示重新开始按钮
+    whileElementsMounted: autoUpdate, // 当元素挂载时更新
+    middleware: [offset(5)], // 偏移
   })
+  /**
+   * 使用悬停
+   */
   const hoverButton = useHover(context)
+  /**
+   * 获取引用属性
+   */
   const { getReferenceProps, getFloatingProps } = useInteractions([hoverButton])
 
   return (

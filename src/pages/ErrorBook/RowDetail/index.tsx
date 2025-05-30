@@ -19,34 +19,78 @@ import ClockIcon from '~icons/heroicons/clock-20-solid'
 import XCircle from '~icons/heroicons/x-circle-20-solid'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 行详情属性
+ */
 type RowDetailProps = {
-  currentRowDetail: groupedWordRecords
-  allRecords: groupedWordRecords[]
+  currentRowDetail: groupedWordRecords // 当前行详情
+  allRecords: groupedWordRecords[] // 所有行详情
 }
-
+/**
+ * 行详情
+ * @param param0
+ * @returns
+ */
 const RowDetail: React.FC<RowDetailProps> = ({ currentRowDetail, allRecords }) => {
+  /**
+   * 设置当前行详情
+   */
   const setCurrentRowDetail = useSetAtom(currentRowDetailAtom)
 
+  /**
+   * 获取词典信息
+   */
   const dictInfo = idDictionaryMap[currentRowDetail.dict]
+
+  /**
+   * 获取单词
+   */
   const { word, isLoading, hasError } = useGetWord(currentRowDetail.word, dictInfo)
+
+  /**
+   * 单词发音图标引用
+   */
   const wordPronunciationIconRef = useRef<WordPronunciationIconRef>(null)
 
+  /**
+   * 行详情数据
+   */
   const rowDetailData: RowDetailData = useMemo(() => {
+    /**
+     * 计算时间
+     */
     const time =
       currentRowDetail.records.length > 0
         ? currentRowDetail.records.reduce((acc, cur) => acc + cur.totalTime, 0) / currentRowDetail.records.length
         : 0
+
+    /**
+     * 计算时间字符串
+     */
     const timeStr = (time / 1000).toFixed(2)
-    const correctCount = currentRowDetail.records.length
+
+    /**
+     * 计算正确次数
+     */
     const wrongCount = currentRowDetail.wrongCount
+
+    /**
+     * 计算总次数
+     */
     const sumCount = correctCount + wrongCount
     return { time: timeStr, sumCount, correctCount, wrongCount }
   }, [currentRowDetail.records, currentRowDetail.wrongCount])
 
+  /**
+   * 关闭行详情
+   */
   const onClose = useCallback(() => {
     setCurrentRowDetail(null)
   }, [setCurrentRowDetail])
 
+  /**
+   * 使用热键
+   */
   useHotkeys(
     'esc',
     (e) => {
@@ -56,6 +100,9 @@ const RowDetail: React.FC<RowDetailProps> = ({ currentRowDetail, allRecords }) =
     { preventDefault: true },
   )
 
+  /**
+   * 使用热键
+   */
   useHotkeys(
     'ctrl+j',
     () => {
@@ -65,6 +112,10 @@ const RowDetail: React.FC<RowDetailProps> = ({ currentRowDetail, allRecords }) =
     { enableOnFormTags: true, preventDefault: true },
   )
 
+  /**
+   * 返回行详情
+   * @returns 行详情
+   */
   return (
     <div className="absolute inset-0 flex  flex-col items-center  justify-center ">
       <div className="my-card relative z-10 flex h-[32rem] min-w-[26rem] select-text flex-col items-center justify-around rounded-2xl bg-white px-3 py-10 dark:bg-gray-900">
@@ -109,11 +160,18 @@ const RowDetail: React.FC<RowDetailProps> = ({ currentRowDetail, allRecords }) =
   )
 }
 
+/**
+ * 行详情数据
+ */
 type RowDetailData = {
-  time: string
-  sumCount: number
-  correctCount: number
-  wrongCount: number
+  time: string // 时间
+  sumCount: number // 总次数
+  correctCount: number // 正确次数
+  wrongCount: number // 错误次数
 }
 
+/**
+ * 行详情
+ * @returns 行详情
+ */
 export default RowDetail

@@ -1,10 +1,29 @@
+/**
+ * 检查字符是否是汉字
+ * @param ch 要检查的字符
+ * @returns 如果是汉字返回true，否则返回false
+ *
+ * 判断标准：
+ * 1. CJK统一汉字范围：U+4E00 - U+9FCF
+ * 2. CJK兼容汉字范围：U+F900 - U+FAFF
+ * 3. CJK扩展A区汉字：U+3400 - U+4DBF
+ */
 export function isKanji(ch: string) {
-  ch = ch[0]
+  ch = ch[0] // 只检查第一个字符
   return (ch >= '\u4e00' && ch <= '\u9fcf') || (ch >= '\uf900' && ch <= '\ufaff') || (ch >= '\u3400' && ch <= '\u4dbf')
 }
 
 /**
- * source: https://github.com/andree-surya/moji4j
+ * 将罗马字转换为平假名
+ * 基于moji4j项目实现（source）：https://github.com/andree-surya/moji4j
+ * @param romaji 输入的罗马字字符串
+ * @returns 转换后的平假名字符串
+ *
+ * 转换规则：
+ * 1. 处理促音（っ）的特殊情况
+ * 2. 使用最长匹配算法（优先匹配4字符组合）
+ * 3. 支持拗音、拨音等特殊发音
+ * 4. 自动处理大小写
  */
 export function romajiToHiragana(romaji: string): string {
   const changeStr: string = romaji.toLowerCase()
@@ -50,10 +69,20 @@ export function romajiToHiragana(romaji: string): string {
   return result
 }
 
+/**
+ * 检查字符是否是罗马字辅音
+ * @param character 要检查的字符
+ * @returns 如果是辅音返回true，否则返回false
+ */
 function isRomanConsonant(character: string): boolean {
   return character >= 'a' && character <= 'z' && !isRomanVowel(character)
 }
 
+/**
+ * 检查字符是否是罗马字元音
+ * @param character 要检查的字符
+ * @returns 如果是元音返回true，否则返回false
+ */
 function isRomanVowel(character: string): boolean {
   return character == 'a' || character == 'i' || character == 'u' || character == 'e' || character == 'o'
 }
@@ -61,6 +90,16 @@ function isRomanVowel(character: string): boolean {
 interface RomajiToHiragana {
   [key: string]: string
 }
+
+/**
+ * 罗马字到平假名的完整映射表
+ * 包含：
+ * - 基本五十音图
+ * - 浊音和半浊音
+ * - 拗音
+ * - 特殊发音
+ * - 小字写法
+ */
 const romajiToHiraganaJson: RomajiToHiragana = {
   a: 'あ',
   i: 'い',

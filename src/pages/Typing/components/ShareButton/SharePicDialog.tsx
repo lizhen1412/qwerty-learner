@@ -39,55 +39,125 @@ const PROMOTE_LIST = [
   { word: '跃然纸上', sentence: '打字手法灵活多变，跃然纸上，生动有趣。' },
 ]
 
+/**
+ * 分享图片对话框
+ * 用于分享打字练习的成绩
+ * @param showState 是否显示分享面板
+ * @param setShowState 设置是否显示分享面板
+ * @param randomChoose 随机选择
+ * @returns 分享图片对话框
+ */
 export type SharePicDialogProps = {
+  /**
+   * 是否显示分享面板
+   */
   showState: boolean
+  /**
+   * 设置是否显示分享面板
+   */
   setShowState: (showState: boolean) => void
   randomChoose: {
+    /**
+     * 随机选择图片
+     */
     picRandom: number
+    /**
+     * 随机选择推广
+     */
     promoteRandom: number
   }
 }
 
+/**
+ * 分享图片对话框
+ * 用于分享打字练习的成绩
+ * @param showState 是否显示分享面板
+ * @param setShowState 设置是否显示分享面板
+ * @param randomChoose 随机选择
+ * @returns 分享图片对话框
+ */
 export default function SharePicDialog({ showState, setShowState, randomChoose }: SharePicDialogProps) {
+  /**
+   * 打字上下文
+   */
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state } = useContext(TypingContext)!
+  /**
+   * 图片引用
+   */
   const imageRef = useRef<HTMLDivElement>(null)
   const [imageURL, setImageURL] = useState<string | null>(null)
+  /**
+   * 当前词典信息
+   */
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  /**
+   * 当前章节
+   */
   const currentChapter = useAtomValue(currentChapterAtom)
 
+  /**
+   * 对话框焦点引用
+   */
   const dialogFocusRef = useRef<HTMLButtonElement>(null)
 
+  /**
+   * 分享图片
+   */
   const shareImage = useMemo(() => PIC_LIST[Math.floor(randomChoose.picRandom * PIC_LIST.length)], [randomChoose.picRandom])
+  /**
+   * 推广
+   */
   const promote = useMemo(() => PROMOTE_LIST[Math.floor(randomChoose.promoteRandom * PROMOTE_LIST.length)], [randomChoose.promoteRandom])
 
+  /**
+   * 加载到PNG
+   */
   useEffect(() => {
     async function loadToPng() {
       const { toPng } = await import('html-to-image')
 
+      /**
+       * 如果图片引用存在
+       */
       if (imageRef.current) {
+        // 获取图片引用宽度
         const width = imageRef.current.offsetWidth
+        // 获取图片引用高度
         const height = imageRef.current.offsetHeight
+        // 将图片引用转换为PNG
         toPng(imageRef.current, { canvasWidth: width * PIC_RATIO, canvasHeight: height * PIC_RATIO }).then((url) => {
-          setImageURL(url)
+          setImageURL(url) // 设置图片URL
         })
       }
     }
 
+    /**
+     * 加载到PNG
+     */
     loadToPng()
   }, [])
 
+  /**
+   * 下载
+   */
   const handleDownload = useCallback(async () => {
     const { saveAs } = await import('file-saver')
 
+    /**
+     * 如果图片URL存在
+     */
     if (imageURL) {
-      saveAs(imageURL, 'Qwerty-learner.png')
-      recordShareAction('download')
+      saveAs(imageURL, 'Qwerty-learner.png') // 下载图片
+      recordShareAction('download') // 记录分享动作
     }
   }, [imageURL])
 
+  /**
+   * 关闭对话框
+   */
   const handleClose = useCallback(() => {
-    setShowState(false)
+    setShowState(false) // 设置是否显示分享面板
   }, [setShowState])
 
   return (

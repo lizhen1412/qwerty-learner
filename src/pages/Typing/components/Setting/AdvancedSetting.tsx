@@ -5,46 +5,100 @@ import * as ScrollArea from '@radix-ui/react-scroll-area'
 import { useAtom } from 'jotai'
 import { useCallback } from 'react'
 
+/**
+ * 高级设置
+ * 用于设置打字练习的选项
+ * @returns 高级设置
+ */
 export default function AdvancedSetting() {
+  /**
+   * 随机配置
+   */
   const [randomConfig, setRandomConfig] = useAtom(randomConfigAtom)
+  /**
+   * 是否展示上一个/下一个单词
+   */
   const [isShowPrevAndNextWord, setIsShowPrevAndNextWord] = useAtom(isShowPrevAndNextWordAtom)
+  /**
+   * 是否忽略大小写
+   */
   const [isIgnoreCase, setIsIgnoreCase] = useAtom(isIgnoreCaseAtom)
+  /**
+   * 是否允许选择文本
+   */
   const [isTextSelectable, setIsTextSelectable] = useAtom(isTextSelectableAtom)
+  /**
+   * 是否允许在悬停时显示答案
+   */
   const [isShowAnswerOnHover, setIsShowAnswerOnHover] = useAtom(isShowAnswerOnHoverAtom)
 
+  /**
+   * 切换随机配置
+   */
   const onToggleRandom = useCallback(
+    /**
+     * 切换随机配置
+     */
     (checked: boolean) => {
+      /**
+       * 设置随机配置
+       */
       setRandomConfig((prev) => ({
-        ...prev,
-        isOpen: checked,
+        ...prev, // 设置随机配置
+        isOpen: checked, // 设置随机配置
       }))
     },
     [setRandomConfig],
   )
 
+  /**
+   * 切换上一个/下一个单词
+   */
   const onToggleLastAndNextWord = useCallback(
+    /**
+     * 切换上一个/下一个单词
+     */
     (checked: boolean) => {
-      setIsShowPrevAndNextWord(checked)
+      setIsShowPrevAndNextWord(checked) // 设置上一个/下一个单词
     },
     [setIsShowPrevAndNextWord],
   )
 
+  /**
+   * 切换忽略大小写
+   */
   const onToggleIgnoreCase = useCallback(
+    /**
+     * 切换忽略大小写
+     */
     (checked: boolean) => {
-      setIsIgnoreCase(checked)
+      setIsIgnoreCase(checked) // 设置忽略大小写
     },
     [setIsIgnoreCase],
   )
 
+  /**
+   * 切换选择文本
+   */
   const onToggleTextSelectable = useCallback(
+    /**
+     * 切换选择文本
+     */
     (checked: boolean) => {
-      setIsTextSelectable(checked)
+      setIsTextSelectable(checked) // 设置选择文本
     },
     [setIsTextSelectable],
   )
+
+  /**
+   * 切换显示答案
+   */
   const onToggleShowAnswerOnHover = useCallback(
+    /**
+     * 切换显示答案
+     */
     (checked: boolean) => {
-      setIsShowAnswerOnHover(checked)
+      setIsShowAnswerOnHover(checked) // 设置显示答案
     },
     [setIsShowAnswerOnHover],
   )

@@ -3,9 +3,15 @@ import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import IconBook from '~icons/bxs/book'
 
+/**
+ * 错题本按钮
+ */
 const ErrorBookButton = () => {
   const navigate = useNavigate()
 
+  /**
+   * 跳转到错题本
+   */
   const toErrorBook = useCallback(() => {
     navigate('/error-book')
     recordErrorBookAction('open')

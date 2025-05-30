@@ -2,6 +2,11 @@ import kai from '@/assets/kai.jpg'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
+/**
+ * 作者按钮
+ * 用于显示作者信息和更多作品
+ * @returns 作者按钮
+ */
 export const AuthorButton = () => {
   return (
     <TooltipProvider delayDuration={100}>

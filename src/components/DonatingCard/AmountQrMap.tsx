@@ -11,6 +11,9 @@ import w50 from '@/assets/qrCord/w50.png'
 import w66 from '@/assets/qrCord/w66.png'
 import weChat from '@/assets/weChat.jpg'
 
+/**
+ * 金额图片映射
+ */
 export const AmountImageMap = {
   '-1': [alipay, weChat],
   6: [a6, w6],

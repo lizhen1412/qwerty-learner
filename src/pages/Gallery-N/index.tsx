@@ -16,27 +16,61 @@ import { useImmer } from 'use-immer'
 import IconInfo from '~icons/ic/outline-info'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 画廊状态
+ */
 export type GalleryState = {
-  currentLanguageTab: LanguageCategoryType
+  currentLanguageTab: LanguageCategoryType // 当前语言标签
 }
 
+/**
+ * 初始化画廊状态
+ */
 const initialGalleryState: GalleryState = {
-  currentLanguageTab: 'en',
+  currentLanguageTab: 'en', // 当前语言标签
 }
 
+/**
+ * 画廊上下文
+ */
 export const GalleryContext = createContext<{
-  state: GalleryState
-  setState: Updater<GalleryState>
+  state: GalleryState // 画廊状态
+  setState: Updater<GalleryState> // 设置画廊状态
 } | null>(null)
 
+/**
+ * 画廊页面
+ * @returns 画廊页面
+ */
 export default function GalleryPage() {
+  /**
+   * 画廊状态
+   */
   const [galleryState, setGalleryState] = useImmer<GalleryState>(initialGalleryState)
+  /**
+   * 导航
+   */
   const navigate = useNavigate()
+  /**
+   * 当前词典信息
+   */
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
 
+  /**
+   * 分组词典
+   */
   const { groupedByCategoryAndTag } = useMemo(() => {
+    /**
+     * 当前语言分类词典
+     */
     const currentLanguageCategoryDicts = dictionaries.filter((dict) => dict.languageCategory === galleryState.currentLanguageTab)
+    /**
+     * 分组词典
+     */
     const groupedByCategory = Object.entries(groupBy(currentLanguageCategoryDicts, (dict) => dict.category))
+    /**
+     * 分组词典
+     */
     const groupedByCategoryAndTag = groupedByCategory.map(
       ([category, dicts]) => [category, groupByDictTags(dicts)] as [string, Record<string, Dictionary[]>],
     )
@@ -46,15 +80,27 @@ export default function GalleryPage() {
     }
   }, [galleryState.currentLanguageTab])
 
+  /**
+   * 返回
+   */
   const onBack = useCallback(() => {
     navigate('/')
   }, [navigate])
 
+  /**
+   * 使用快捷键
+   */
   useHotkeys('enter,esc', onBack, { preventDefault: true })
 
+  /**
+   * 设置当前语言标签
+   */
   useEffect(() => {
+    // 如果当前词典信息存在，则设置当前语言标签
     if (currentDictInfo) {
+      // 设置当前语言标签
       setGalleryState((state) => {
+        // 设置当前语言标签
         state.currentLanguageTab = currentDictInfo.languageCategory
       })
     }

@@ -12,18 +12,37 @@ import { useHotkeys } from 'react-hotkeys-hook'
 import { useNavigate } from 'react-router-dom'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 分析页面
+ */
 const Analysis = () => {
+  /**
+   * 导航
+   */
   const navigate = useNavigate()
+
+  /**
+   * 是否打开暗色模式
+   */
   const [, setIsOpenDarkMode] = useAtom(isOpenDarkModeAtom)
 
+  /**
+   * 返回
+   */
   const onBack = useCallback(() => {
     navigate('/')
   }, [navigate])
 
+  /**
+   * 切换暗色模式
+   */
   const changeDarkModeState = () => {
     setIsOpenDarkMode((old) => !old)
   }
 
+  /**
+   * 使用热键
+   */
   useHotkeys(
     'ctrl+d',
     () => {
@@ -33,13 +52,23 @@ const Analysis = () => {
     [],
   )
 
+  /**
+   * 使用热键
+   */
   useHotkeys('enter,esc', onBack, { preventDefault: true })
 
+  /**
+   * 使用单词统计
+   */
   const { isEmpty, exerciseRecord, wordRecord, wpmRecord, accuracyRecord, wrongTimeRecord } = useWordStats(
     dayjs().subtract(1, 'year').unix(),
     dayjs().unix(),
   )
 
+  /**
+   * 返回分析页面
+   * @returns 分析页面
+   */
   return (
     <Layout>
       <div className="flex w-full flex-1 flex-col overflow-y-auto pl-20 pr-20 pt-20">

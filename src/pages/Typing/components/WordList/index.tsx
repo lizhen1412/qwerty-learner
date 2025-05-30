@@ -10,9 +10,19 @@ import { useContext, useState } from 'react'
 import ListIcon from '~icons/tabler/list'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 当前词典标题
+ * 用于显示当前词典的标题
+ */
 const currentDictTitle = atom((get) => {
+  /**
+   * 是否复习模式
+   */
   const isReviewMode = get(isReviewModeAtom)
 
+  /**
+   * 如果复习模式，则显示当前词典的标题
+   */
   if (isReviewMode) {
     return `${get(currentDictInfoAtom).name} 错题复习`
   } else {
@@ -20,20 +30,36 @@ const currentDictTitle = atom((get) => {
   }
 })
 
+/**
+ * 单词列表
+ * 用于显示单词列表
+ * @returns 单词列表
+ */
 export default function WordList() {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
-
+  /**
+   * 是否打开单词列表
+   */
   const [isOpen, setIsOpen] = useState(false)
+  /**
+   * 当前词典标题
+   */
   const currentDictTitleValue = useAtomValue(currentDictTitle)
 
+  /**
+   * 关闭单词列表
+   */
   function closeModal() {
     setIsOpen(false)
   }
 
+  /**
+   * 打开单词列表
+   */
   function openModal() {
     setIsOpen(true)
-    dispatch({ type: TypingStateActionType.SET_IS_TYPING, payload: false })
+    dispatch({ type: TypingStateActionType.SET_IS_TYPING, payload: false }) // 设置打字状态为关闭
   }
 
   return (

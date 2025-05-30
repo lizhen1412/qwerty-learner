@@ -10,97 +10,160 @@ import { Fragment, useCallback, useEffect, useMemo } from 'react'
 import IconCheck from '~icons/tabler/check'
 import IconChevronDown from '~icons/tabler/chevron-down'
 
+/**
+ * 发音及音标切换器
+ * 用于在单词学习界面中切换发音和音标
+ * 支持发音开关、音标开关、释义发音开关、循环发音开关、单词发音口音切换
+ * @returns 发音及音标切换器
+ */
 const PronunciationSwitcher = () => {
+  /**
+   * 当前词典信息
+   */
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  /**
+   * 发音配置
+   */
   const [pronunciationConfig, setPronunciationConfig] = useAtom(pronunciationConfigAtom)
+  /**
+   * 音标配置
+   */
   const [phoneticConfig, setPhoneticConfig] = useAtom(phoneticConfigAtom)
+  /**
+   * 发音列表
+   */
   const pronunciationList = useMemo(() => LANG_PRON_MAP[currentDictInfo.language].pronunciation, [currentDictInfo.language])
 
+  /**
+   * 默认发音
+   */
   useEffect(() => {
+    /**
+     * 默认发音索引
+     */
     const defaultPronIndex = currentDictInfo.defaultPronIndex || LANG_PRON_MAP[currentDictInfo.language].defaultPronIndex
+    /**
+     * 默认发音
+     */
     const defaultPron = pronunciationList[defaultPronIndex]
 
     // if the current pronunciation is not in the pronunciation list, reset the pronunciation config to default
     const index = pronunciationList.findIndex((item) => item.pron === pronunciationConfig.type)
+    // 如果当前发音不在发音列表中，则重置发音配置为默认发音
     if (index === -1) {
       // only change the type and name, keep the isOpen state
       setPronunciationConfig((old) => ({
-        ...old,
-        type: defaultPron.pron,
-        name: defaultPron.name,
+        ...old, // 保持其他状态不变
+        type: defaultPron.pron, // 设置默认发音
+        name: defaultPron.name, // 设置默认发音名称
       }))
     }
   }, [currentDictInfo.defaultPronIndex, currentDictInfo.language, setPronunciationConfig, pronunciationList, pronunciationConfig.type])
 
+  /**
+   * 更新音标配置
+   */
   useEffect(() => {
+    /**
+     * 获取音标类型
+     */
     const phoneticType = PRONUNCIATION_PHONETIC_MAP[pronunciationConfig.type]
     if (phoneticType) {
       setPhoneticConfig((old) => ({
-        ...old,
-        type: phoneticType,
+        // 设置音标配置
+        ...old, // 保持其他状态不变
+        type: phoneticType, // 设置音标类型
       }))
     }
   }, [pronunciationConfig.type, setPhoneticConfig])
 
+  /**
+   * 更新发音配置
+   */
   const onChangePronunciationIsOpen = useCallback(
     (value: boolean) => {
       setPronunciationConfig((old) => ({
-        ...old,
-        isOpen: value,
+        // 设置发音配置
+        ...old, // 保持其他状态不变
+        isOpen: value, // 设置发音开关
       }))
     },
     [setPronunciationConfig],
   )
 
+  /**
+   * 更新释义发音配置
+   */
   const onChangePronunciationIsTransRead = useCallback(
     (value: boolean) => {
       setPronunciationConfig((old) => ({
-        ...old,
-        isTransRead: value,
+        // 设置发音配置
+        ...old, // 保持其他状态不变
+        isTransRead: value, // 设置释义发音开关
       }))
     },
     [setPronunciationConfig],
   )
 
+  /**
+   * 更新循环发音配置
+   */
   const onChangePronunciationIsLoop = useCallback(
     (value: boolean) => {
       setPronunciationConfig((old) => ({
-        ...old,
-        isLoop: value,
+        // 设置发音配置
+        ...old, // 保持其他状态不变
+        isLoop: value, // 设置循环发音开关
       }))
     },
     [setPronunciationConfig],
   )
 
+  /**
+   * 更新音标开关
+   */
   const onChangePhoneticIsOpen = useCallback(
     (value: boolean) => {
       setPhoneticConfig((old) => ({
-        ...old,
-        isOpen: value,
+        // 设置音标配置
+        ...old, // 保持其他状态不变
+        isOpen: value, // 设置音标开关
       }))
     },
     [setPhoneticConfig],
   )
 
+  /**
+   * 更新发音类型
+   */
   const onChangePronunciationType = useCallback(
     (value: PronunciationType) => {
+      /**
+       * 获取发音类型
+       */
       const item = pronunciationList.find((item) => item.pron === value)
+      // 如果发音类型存在，则更新发音配置
       if (item) {
         setPronunciationConfig((old) => ({
-          ...old,
-          type: item.pron,
-          name: item.name,
+          // 设置发音配置
+          ...old, // 保持其他状态不变
+          type: item.pron, // 设置发音类型
+          name: item.name, // 设置发音名称
         }))
       }
     },
     [setPronunciationConfig, pronunciationList],
   )
 
+  /**
+   * 当前发音标签
+   */
   const currentLabel = useMemo(() => {
+    // 如果发音开关开启，则返回发音名称
     if (pronunciationConfig.isOpen) {
-      return pronunciationConfig.name
+      return pronunciationConfig.name // 返回发音名称
     } else {
-      return '关闭'
+      return '关闭' // 返回关闭
     }
   }, [pronunciationConfig.isOpen, pronunciationConfig.name])
 

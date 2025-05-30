@@ -4,14 +4,29 @@ import { Fragment, useState } from 'react'
 import IconKeyboard from '~icons/ic/round-keyboard'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 打字指法图示
+ * @returns 打字指法图示
+ */
 export default function HandPositionIllustration() {
+  /**
+   * 是否打开
+   */
   const [isOpen, setIsOpen] = useState(false)
 
+  /**
+   * 关闭对话框
+   */
   function closeModal() {
+    // 设置是否打开为 false
     setIsOpen(false)
   }
 
+  /**
+   * 打开对话框
+   */
   function openModal() {
+    // 设置是否打开为 true
     setIsOpen(true)
   }
 

@@ -4,23 +4,62 @@ import type React from 'react'
 import { useEffect, useRef } from 'react'
 import IconCheckCircle from '~icons/heroicons/check-circle-solid'
 
+/**
+ * 章节按钮
+ * @param param0
+ * @returns
+ */
 export const ChapterButton: React.FC<ChapterButtonProps> = ({ index, selected, wordCount, onClick }) => {
+  /**
+   * 按钮引用
+   */
   const buttonRef = useRef<HTMLButtonElement>(null)
 
+  /**
+   * 使用交叉观察器
+   */
   const entry = useIntersectionObserver(buttonRef, {})
+  /**
+   * 是否可见
+   */
   const isVisible = !!entry?.isIntersecting
+  /**
+   * 章节统计
+   */
   const chapterStatus = useChapterStats(index, isVisible)
 
+  /**
+   * 使用 useEffect 监听选中状态
+   */
   useEffect(() => {
+    /**
+     * 如果选中且按钮引用不为空，则滚动到按钮
+     */
     if (selected && buttonRef.current !== null) {
+      /**
+       * 按钮
+       */
       const button = buttonRef.current
+      /**
+       * 容器
+       */
       const container = button.parentElement?.parentElement
+      /**
+       * 半高度
+       */
       const halfHeight = button.getBoundingClientRect().height / 2
+      /**
+       * 滚动到按钮
+       */
       container?.scrollTo({ top: Math.max(button.offsetTop - container.offsetTop - halfHeight, 0), behavior: 'smooth' })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected])
 
+  /**
+   * 返回章节按钮
+   * @returns 章节按钮
+   */
   return (
     <button
       ref={buttonRef}
@@ -59,9 +98,12 @@ export const ChapterButton: React.FC<ChapterButtonProps> = ({ index, selected, w
 
 export default ChapterButton
 
+/**
+ * 章节按钮属性
+ */
 export type ChapterButtonProps = {
-  index: number
-  selected: boolean
-  wordCount: number
-  onClick: () => void
+  index: number // 索引
+  selected: boolean // 是否选中
+  wordCount: number // 单词数
+  onClick: () => void // 点击事件
 }

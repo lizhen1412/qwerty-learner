@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 
+/**
+ * 使用语音合成 API 结果
+ */
 export type UseSpeechResult = {
   /**
    * Speak speaking
@@ -28,56 +31,82 @@ export default function useSpeech(text: string, option?: Partial<SpeechSynthesis
   const [speaking, setSpeaking] = useState(false)
   const [utterance, setUtterance] = useState<SpeechSynthesisUtterance | null>(null)
 
+  /**
+   * 使用 useEffect 监听语音合成 API
+   */
   useEffect(() => {
-    const synth = window.speechSynthesis
+    const synth = window.speechSynthesis // 获取语音合成 API
     if (!synth || typeof SpeechSynthesisUtterance === 'undefined') {
-      console.error('SpeechSynthesis API is not supported in this browser')
+      // 如果语音合成 API 不存在或者 SpeechSynthesisUtterance 不存在
+      console.error('SpeechSynthesis API is not supported in this browser') // 抛出错误
       return
     }
 
-    const newUtterance = new SpeechSynthesisUtterance(text)
-    Object.assign(newUtterance, option)
-    setUtterance(newUtterance)
+    const newUtterance = new SpeechSynthesisUtterance(text) // 创建新的 utterance
+    Object.assign(newUtterance, option) // 合并 option
+    setUtterance(newUtterance) // 设置 utterance
 
     return () => {
-      synth.cancel()
-      setSpeaking(false)
+      synth.cancel() // 取消说话
+      setSpeaking(false) // 设置说话状态为 false
     }
   }, [option, text])
 
+  /**
+   * 使用 useEffect 监听语音合成 API
+   */
   useEffect(() => {
     if (utterance) {
+      // 如果 utterance 存在
       const onend = () => {
-        setSpeaking(false)
+        // 监听结束
+        setSpeaking(false) // 设置说话状态为 false
       }
-      utterance.addEventListener('end', onend)
+      utterance.addEventListener('end', onend) // 添加监听结束
       return () => {
-        utterance.removeEventListener('end', onend)
+        utterance.removeEventListener('end', onend) // 移除监听结束
       }
     }
   }, [utterance])
 
+  /**
+   * 使用 useCallback 监听语音合成 API
+   */
   const speak = useCallback(
+    /**
+     * 使用 useCallback 监听语音合成 API
+     * @param abort 是否取消
+     */
     (abort = false) => {
       if (utterance) {
-        const synth = window.speechSynthesis
+        // 如果 utterance 存在
+        const synth = window.speechSynthesis // 获取语音合成 API
         if (abort && synth.speaking) {
-          synth.cancel()
+          // 如果需要取消并且正在说话
+          synth.cancel() // 取消说话
         }
-        setSpeaking(true)
-        synth.speak(utterance)
+        setSpeaking(true) // 设置说话状态为 true
+        synth.speak(utterance) // 说话
       }
     },
     [utterance],
   )
 
+  /**
+   * 使用 useCallback 监听语音合成 API
+   */
   const cancel = useCallback(() => {
-    const synth = window.speechSynthesis
+    const synth = window.speechSynthesis // 获取语音合成 API
     if (speaking) {
-      synth.cancel()
+      // 如果正在说话
+      synth.cancel() // 取消说话
     }
   }, [speaking])
 
+  /**
+   * 返回语音合成 API 结果
+   * @returns 语音合成 API 结果
+   */
   return {
     speak,
     cancel,

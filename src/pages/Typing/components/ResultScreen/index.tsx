@@ -29,38 +29,84 @@ import IconGithub from '~icons/simple-icons/github'
 import IconWechat from '~icons/simple-icons/wechat'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 结果屏幕
+ * 用于显示打字结果和相关操作
+ * @returns 结果屏幕
+ */
 const ResultScreen = () => {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
 
+  /**
+   * 设置单词听写配置
+   */
   const setWordDictationConfig = useSetAtom(wordDictationConfigAtom)
+  /**
+   * 当前词典信息
+   */
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  /**
+   * 当前章节
+   */
   const [currentChapter, setCurrentChapter] = useAtom(currentChapterAtom)
+  /**
+   * 设置信息面板状态
+   */
   const setInfoPanelState = useSetAtom(infoPanelStateAtom)
+  /**
+   * 随机配置
+   */
   const randomConfig = useAtomValue(randomConfigAtom)
+  /**
+   * 导航
+   */
   const navigate = useNavigate()
-
+  /**
+   * 设置复习模式信息
+   */
   const setReviewModeInfo = useSetAtom(reviewModeInfoAtom)
+  /**
+   * 是否复习模式
+   */
   const isReviewMode = useAtomValue(isReviewModeAtom)
 
+  /**
+   * 使用效果
+   */
   useEffect(() => {
     // tick a zero timer to calc the stats
     dispatch({ type: TypingStateActionType.TICK_TIMER, addTime: 0 })
   }, [dispatch])
 
+  /**
+   * 导出单词
+   */
   const exportWords = useCallback(() => {
     const { words, userInputLogs } = state.chapterData
+    /**
+     * 导出数据
+     */
     const exportData = userInputLogs.map((log) => {
+      /**
+       * 单词
+       */
       const word = words[log.index]
+      /**
+       * 单词名称
+       */
       const wordName = word.name
+      /**
+       * 导出数据
+       */
       return {
-        ...word,
-        trans: word.trans.join(';'),
-        correctCount: log.correctCount,
-        wrongCount: log.wrongCount,
-        wrongLetters: Object.entries(log.LetterMistakes)
-          .map(([key, mistakes]) => `${wordName[Number(key)]}:${mistakes.length}`)
-          .join(';'),
+        ...word, // 单词
+        trans: word.trans.join(';'), // 单词释义
+        correctCount: log.correctCount, // 正确数量
+        wrongCount: log.wrongCount, // 错误数量
+        wrongLetters: Object.entries(log.LetterMistakes) // 错误字母
+          .map(([key, mistakes]) => `${wordName[Number(key)]}:${mistakes.length}`) // 错误字母
+          .join(';'), // 错误字母
       }
     })
 
@@ -76,23 +122,35 @@ const ResultScreen = () => {
       })
   }, [currentChapter, currentDictInfo.name, state.chapterData])
 
+  /**
+   * 错误单词
+   */
   const wrongWords = useMemo(() => {
-    return state.chapterData.userInputLogs
-      .filter((log) => log.wrongCount > 0)
-      .map((log) => state.chapterData.words[log.index])
-      .filter((word) => word !== undefined)
+    return state.chapterData.userInputLogs // 用户输入日志
+      .filter((log) => log.wrongCount > 0) // 错误数量大于0
+      .map((log) => state.chapterData.words[log.index]) // 单词
+      .filter((word) => word !== undefined) // 单词不为空
   }, [state.chapterData.userInputLogs, state.chapterData.words])
 
+  /**
+   * 是否最后一章
+   */
   const isLastChapter = useMemo(() => {
-    return currentChapter >= currentDictInfo.chapterCount - 1
+    return currentChapter >= currentDictInfo.chapterCount - 1 // 当前章节大于等于总章节数减1
   }, [currentChapter, currentDictInfo])
 
+  /**
+   * 正确率
+   */
   const correctRate = useMemo(() => {
-    const chapterLength = state.chapterData.words.length
-    const correctCount = chapterLength - wrongWords.length
-    return Math.floor((correctCount / chapterLength) * 100)
-  }, [state.chapterData.words.length, wrongWords.length])
+    const chapterLength = state.chapterData.words.length // 章节长度
+    const correctCount = chapterLength - wrongWords.length // 正确数量
+    return Math.floor((correctCount / chapterLength) * 100) // 正确率
+  }, [state.chapterData.words.length, wrongWords.length]) // 依赖章节长度和错误数量
 
+  /**
+   * 错误级别
+   */
   const mistakeLevel = useMemo(() => {
     if (correctRate >= 85) {
       return 0
@@ -103,74 +161,152 @@ const ResultScreen = () => {
     }
   }, [correctRate])
 
+  /**
+   * 时间字符串
+   */
   const timeString = useMemo(() => {
-    const seconds = state.timerData.time
-    const minutes = Math.floor(seconds / 60)
-    const minuteString = minutes < 10 ? '0' + minutes : minutes + ''
-    const restSeconds = seconds % 60
-    const secondString = restSeconds < 10 ? '0' + restSeconds : restSeconds + ''
-    return `${minuteString}:${secondString}`
+    const seconds = state.timerData.time // 秒
+    const minutes = Math.floor(seconds / 60) // 分钟
+    const minuteString = minutes < 10 ? '0' + minutes : minutes + '' // 分钟字符串
+    const restSeconds = seconds % 60 // 剩余秒
+    const secondString = restSeconds < 10 ? '0' + restSeconds : restSeconds + '' // 秒字符串
+    return `${minuteString}:${secondString}` // 时间字符串
   }, [state.timerData.time])
 
+  /**
+   * 重复本章节
+   */
   const repeatButtonHandler = useCallback(async () => {
+    /**
+     * 是否复习模式
+     */
     if (isReviewMode) {
       return
     }
 
+    /**
+     * 设置单词听写配置
+     */
     setWordDictationConfig((old) => {
+      /**
+       * 是否打开
+       */
       if (old.isOpen) {
+        /**
+         * 是否自动打开
+         */
         if (old.openBy === 'auto') {
-          return { ...old, isOpen: false }
+          return { ...old, isOpen: false } // 设置单词听写配置为关闭
         }
       }
-      return old
+      return old // 返回旧的单词听写配置
     })
-    dispatch({ type: TypingStateActionType.REPEAT_CHAPTER, shouldShuffle: randomConfig.isOpen })
+    /**
+     * 重复本章节
+     */
+    dispatch({ type: TypingStateActionType.REPEAT_CHAPTER, shouldShuffle: randomConfig.isOpen }) // 重复本章节
   }, [isReviewMode, setWordDictationConfig, dispatch, randomConfig.isOpen])
 
+  /**
+   * 默写本章节
+   */
   const dictationButtonHandler = useCallback(async () => {
+    /**
+     * 是否复习模式
+     */
     if (isReviewMode) {
       return
     }
 
-    setWordDictationConfig((old) => ({ ...old, isOpen: true, openBy: 'auto' }))
-    dispatch({ type: TypingStateActionType.REPEAT_CHAPTER, shouldShuffle: randomConfig.isOpen })
+    /**
+     * 设置单词听写配置
+     */
+    setWordDictationConfig((old) => ({ ...old, isOpen: true, openBy: 'auto' })) // 设置单词听写配置为打开
+    /**
+     * 重复本章节
+     */
+    dispatch({ type: TypingStateActionType.REPEAT_CHAPTER, shouldShuffle: randomConfig.isOpen }) // 重复本章节
   }, [isReviewMode, setWordDictationConfig, dispatch, randomConfig.isOpen])
 
+  /**
+   * 下一章节
+   */
   const nextButtonHandler = useCallback(() => {
+    /**
+     * 是否复习模式
+     */
     if (isReviewMode) {
       return
     }
 
+    /**
+     * 设置单词听写配置
+     */
     setWordDictationConfig((old) => {
+      /**
+       * 是否打开
+       */
       if (old.isOpen) {
+        /**
+         * 是否自动打开
+         */
         if (old.openBy === 'auto') {
-          return { ...old, isOpen: false }
+          return { ...old, isOpen: false } // 设置单词听写配置为关闭
         }
       }
-      return old
+      return old // 返回旧的单词听写配置
     })
+    /**
+     * 是否最后一章
+     */
     if (!isLastChapter) {
+      /**
+       * 设置当前章节
+       */
       setCurrentChapter((old) => old + 1)
+      /**
+       * 下一章节
+       */
       dispatch({ type: TypingStateActionType.NEXT_CHAPTER })
     }
   }, [dispatch, isLastChapter, isReviewMode, setCurrentChapter, setWordDictationConfig])
 
+  /**
+   * 退出按钮
+   */
   const exitButtonHandler = useCallback(() => {
+    /**
+     * 是否复习模式
+     */
     if (isReviewMode) {
-      setCurrentChapter(0)
+      setCurrentChapter(0) // 设置当前章节为0
       setReviewModeInfo((old) => ({ ...old, isReviewMode: false }))
     } else {
       dispatch({ type: TypingStateActionType.REPEAT_CHAPTER, shouldShuffle: false })
     }
   }, [dispatch, isReviewMode, setCurrentChapter, setReviewModeInfo])
 
+  /**
+   * 导航到图库
+   */
   const onNavigateToGallery = useCallback(() => {
+    /**
+     * 设置当前章节
+     */
     setCurrentChapter(0)
+    /**
+     * 设置复习模式信息
+     */
     setReviewModeInfo((old) => ({ ...old, isReviewMode: false }))
+    /**
+     * 导航到图库
+     */
     navigate('/gallery')
   }, [navigate, setCurrentChapter, setReviewModeInfo])
 
+  /**
+   * 下一章节
+   */
   useHotkeys(
     'enter',
     () => {
@@ -179,6 +315,9 @@ const ResultScreen = () => {
     { preventDefault: true },
   )
 
+  /**
+   * 重复本章节
+   */
   useHotkeys(
     'space',
     (e) => {
@@ -197,6 +336,9 @@ const ResultScreen = () => {
     { preventDefault: true },
   )
 
+  /**
+   * 打开信息面板
+   */
   const handleOpenInfoPanel = useCallback(
     (modalType: InfoPanelType) => {
       recordOpenInfoPanelAction(modalType, 'resultScreen')

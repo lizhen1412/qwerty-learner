@@ -1,20 +1,40 @@
 import { RadioGroup } from '@headlessui/react'
 import { useCallback } from 'react'
 
+/**
+ * 词典标签切换器
+ * @param tagList 标签列表
+ * @param currentTag 当前标签
+ * @param onChangeCurrentTag 切换标签
+ */
 type Props = {
-  tagList: string[]
-  currentTag: string
-  onChangeCurrentTag: (tag: string) => void
+  tagList: string[] // 标签列表
+  currentTag: string // 当前标签
+  onChangeCurrentTag: (tag: string) => void // 切换标签
 }
 
+/**
+ * 词典标签切换器
+ * @param tagList 标签列表
+ * @param currentTag 当前标签
+ * @param onChangeCurrentTag 切换标签
+ * @returns 词典标签切换器
+ */
 export default function DictTagSwitcher({ tagList, currentTag, onChangeCurrentTag }: Props) {
+  /**
+   * 切换标签
+   */
   const onChangeTag = useCallback(
     (tag: string) => {
+      // 切换标签
       onChangeCurrentTag(tag)
     },
     [onChangeCurrentTag],
   )
 
+  /**
+   * 渲染
+   */
   return (
     <RadioGroup value={currentTag} onChange={onChangeTag}>
       <div className="flex items-center space-x-4">

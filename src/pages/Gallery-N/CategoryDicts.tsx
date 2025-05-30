@@ -6,20 +6,54 @@ import { findCommonValues } from '@/utils'
 import { useAtomValue } from 'jotai'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
+/**
+ * 词典组
+ * @param groupedDictsByTag 词典组
+ * @returns 词典组
+ */
 export default function DictionaryGroup({ groupedDictsByTag }: { groupedDictsByTag: Record<string, Dictionary[]> }) {
+  /**
+   * 标签列表
+   */
   const tagList = useMemo(() => Object.keys(groupedDictsByTag), [groupedDictsByTag])
+  /**
+   * 当前标签
+   */
   const [currentTag, setCurrentTag] = useState(tagList.length > 0 ? tagList[0] : '')
+  /**
+   * 当前词典信息
+   */
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
 
+  /**
+   *
+   * @param tag 标签
+   */
   const onChangeCurrentTag = useCallback((tag: string) => {
+    /**
+     * 设置当前标签
+     */
     setCurrentTag(tag)
   }, [])
 
+  /**
+   * 设置当前标签
+   */
   useEffect(() => {
+    /**
+     * 获取公共标签
+     */
     const commonTags = findCommonValues(tagList, currentDictInfo.tags)
+    /**
+     * 如果公共标签存在，则设置当前标签
+     */
     if (commonTags.length > 0) {
+      /**
+       * 设置当前标签
+       */
       setCurrentTag(commonTags[0])
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentDictInfo.tags, tagList])
 
   return (

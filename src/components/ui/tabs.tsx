@@ -3,8 +3,16 @@ import { cn } from '@/utils/ui'
 import * as TabsPrimitive from '@radix-ui/react-tabs'
 import * as React from 'react'
 
+/**
+ * 标签组件
+ * @returns 标签组件
+ */
 const Tabs = TabsPrimitive.Root
 
+/**
+ * 标签列表
+ * @returns 标签列表
+ */
 const TabsList = React.forwardRef<React.ElementRef<typeof TabsPrimitive.List>, React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>>(
   ({ className, ...props }, ref) => (
     <TabsPrimitive.List
@@ -19,6 +27,10 @@ const TabsList = React.forwardRef<React.ElementRef<typeof TabsPrimitive.List>, R
 )
 TabsList.displayName = TabsPrimitive.List.displayName
 
+/**
+ * 标签触发器
+ * @returns 标签触发器
+ */
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
@@ -34,6 +46,10 @@ const TabsTrigger = React.forwardRef<
 ))
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 
+/**
+ * 标签内容
+ * @returns 标签内容
+ */
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>

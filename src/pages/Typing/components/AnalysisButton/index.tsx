@@ -3,9 +3,19 @@ import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ChartPie from '~icons/heroicons/chart-pie-solid'
 
+/**
+ * 分析按钮
+ * @returns 分析按钮
+ */
 const AnalysisButton = () => {
+  /**
+   * 导航
+   */
   const navigate = useNavigate()
 
+  /**
+   * 跳转分析页面
+   */
   const toAnalysis = useCallback(() => {
     navigate('/analysis')
     recordAnalysisAction('open')

@@ -9,10 +9,13 @@ import type { LanguageCategoryType } from '@/typings'
 import { RadioGroup } from '@headlessui/react'
 import { useCallback, useContext } from 'react'
 
+/**
+ * 语言标签选项
+ */
 export type LanguageTabOption = {
-  id: LanguageCategoryType
-  name: string
-  flag: string
+  id: LanguageCategoryType // 语言标签
+  name: string // 名称
+  flag: string // 国旗 emoji 符号
 }
 
 const options: LanguageTabOption[] = [
@@ -24,13 +27,24 @@ const options: LanguageTabOption[] = [
   { id: 'code', name: 'Code', flag: codeFlag },
 ]
 
+/**
+ * 语言标签切换器
+ * @returns 语言标签切换器
+ */
 export function LanguageTabSwitcher() {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const { state, setState } = useContext(GalleryContext)!
 
+  /**
+   * 切换语言标签
+   */
   const onChangeTab = useCallback(
     (tab: string) => {
+      /**
+       * 设置画廊状态
+       */
       setState((draft) => {
+        // 设置当前语言标签
         draft.currentLanguageTab = tab as LanguageCategoryType
       })
     },

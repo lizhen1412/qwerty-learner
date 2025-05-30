@@ -8,12 +8,22 @@ import IconStar from '~icons/material-symbols/star'
 import IconStarOutline from '~icons/material-symbols/star-outline'
 import IconCircleX from '~icons/tabler/circle-x'
 
+/**
+ * 星星卡片组件
+ * @returns 星星卡片组件
+ */
 export default function StarCard() {
+  // 倒计时
   const [countdown, setCountdown] = useState(5)
+  // 是否正在计数
   const [isCounting, setIsCounting] = useState(false)
   const setDismissStartCardDate = useSetAtom(dismissStartCardDateAtom)
+  // 是否显示
   const [isShow, setIsShow] = useState(false)
 
+  /**
+   * 使用 useLayoutEffect 监听星星卡片显示
+   */
   useLayoutEffect(() => {
     // 直接使用 jotai 的 dismissStartCardDate 其值先是默认值，然后才是 localStorage 中的值
     const value = window.localStorage.getItem(DISMISS_START_CARD_DATE_KEY) as Date | null
@@ -22,6 +32,9 @@ export default function StarCard() {
     }
   }, [])
 
+  /**
+   * 点击关闭星星卡片
+   */
   const onClickCloseStar = useCallback(() => {
     setIsShow(false)
     setDismissStartCardDate(new Date())
@@ -30,12 +43,18 @@ export default function StarCard() {
     }
   }, [setIsShow, setDismissStartCardDate, isCounting])
 
+  /**
+   * 点击想要星星
+   */
   const onClickWantStar = useCallback(() => {
     setIsCounting(true)
     setDismissStartCardDate(new Date())
     recordStarAction('star')
   }, [setDismissStartCardDate])
 
+  /**
+   * 使用 useEffect 监听倒计时
+   */
   useEffect(() => {
     let countdownId: number
     if (isCounting && countdown > 0) {
@@ -51,6 +70,10 @@ export default function StarCard() {
     return () => clearInterval(countdownId)
   }, [isCounting, countdown, setIsShow])
 
+  /**
+   * 返回星星卡片内容
+   * @returns 星星卡片内容
+   */
   const content = useMemo(() => {
     return (
       <>
@@ -89,6 +112,10 @@ export default function StarCard() {
     )
   }, [isCounting, onClickWantStar])
 
+  /**
+   * 返回星星卡片组件
+   * @returns 星星卡片组件
+   */
   return (
     <Transition
       appear

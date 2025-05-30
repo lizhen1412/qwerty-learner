@@ -3,6 +3,9 @@ import * as TogglePrimitive from '@radix-ui/react-toggle'
 import { type VariantProps, cva } from 'class-variance-authority'
 import * as React from 'react'
 
+/**
+ * 切换变体
+ */
 const toggleVariants = cva(
   'inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors hover:bg-slate-100 hover:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-400 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50',
   {
@@ -25,6 +28,11 @@ const toggleVariants = cva(
   },
 )
 
+/**
+ * 切换组件
+ * @param param0
+ * @returns
+ */
 const Toggle = React.forwardRef<
   React.ElementRef<typeof TogglePrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> & VariantProps<typeof toggleVariants>

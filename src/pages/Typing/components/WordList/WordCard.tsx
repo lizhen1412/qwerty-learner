@@ -5,10 +5,26 @@ import type { Word } from '@/typings'
 import { useAtomValue } from 'jotai'
 import { useCallback, useRef } from 'react'
 
+/**
+ * 单词卡片
+ * 用于显示单词卡片
+ * @param word 单词
+ * @param isActive 是否激活
+ * @returns 单词卡片
+ */
 export default function WordCard({ word, isActive }: { word: Word; isActive: boolean }) {
+  /**
+   * 单词发音图标引用
+   */
   const wordPronunciationIconRef = useRef<WordPronunciationIconRef>(null)
+  /**
+   * 当前语言
+   */
   const currentLanguage = useAtomValue(currentDictInfoAtom).language
 
+  /**
+   * 播放单词发音
+   */
   const handlePlay = useCallback(() => {
     wordPronunciationIconRef.current?.play()
   }, [])

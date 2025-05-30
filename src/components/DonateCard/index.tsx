@@ -11,24 +11,47 @@ import type React from 'react'
 import { Fragment, useLayoutEffect, useMemo, useState } from 'react'
 import IconParty from '~icons/logos/partytown-icon'
 
+/**
+ * 捐赠卡片组件
+ * @returns 捐赠卡片组件
+ */
 export const DonateCard = () => {
+  // 是否显示捐赠卡片
   const [show, setShow] = useState(false)
+  // 捐赠金额
   const [amount, setAmount] = useState<AmountType | undefined>(undefined)
 
+  // 章节数量
   const chapterNumber = useChapterNumber()
+  // 单词数量
   const wordNumber = useWordNumber()
+  // 总错误次数
   const sumWrongCount = useSumWrongCount()
+  // 距离第一个单词记录的天数
   const dayFromFirstWord = useDayFromFirstWordRecord()
+  // 距离 Qwerty 上线天数
   const dayFromQwerty = useMemo(() => {
+    // 获取当前日期
     const now = dayjs()
+    // 获取 Qwerty 上线日期
     const past = dayjs('2021-01-21')
+    // 计算距离 Qwerty 上线天数
     return now.diff(past, 'day')
   }, [])
 
+  /**
+   * 高亮文本组件
+   * @param param0
+   * @returns
+   */
   const HighlightedText = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+    // 返回高亮文本组件
     return <span className={`font-bold  ${className ? className : 'text-indigo-500'}`}>{children}</span>
   }
 
+  /**
+   * 点击已捐赠按钮
+   */
   const onClickHasDonated = () => {
     reportDonateCard({
       type: 'donate',
@@ -40,11 +63,17 @@ export const DonateCard = () => {
       amount: amount ?? 0,
     })
 
+    // 设置显示状态为 false
     setShow(false)
+    // 获取当前日期
     const now = dayjs()
+    // 将当前日期存储到本地存储中
     window.localStorage.setItem(DONATE_DATE, now.format())
   }
 
+  /**
+   * 点击之后提醒我
+   */
   const onClickRemindMeLater = () => {
     reportDonateCard({
       type: 'dismiss',
@@ -56,25 +85,44 @@ export const DonateCard = () => {
       amount: amount ?? 0,
     })
 
+    // 设置显示状态为 false
     setShow(false)
   }
 
+  /**
+   * 捐赠金额变化
+   * @param amount 捐赠金额
+   */
   const onAmountChange = (amount: AmountType) => {
     setAmount(amount)
   }
 
+  /**
+   * 使用 useLayoutEffect 监听章节数量变化
+   */
   useLayoutEffect(() => {
+    // 如果章节数量大于 0 且是 10 的倍数
     if (chapterNumber && chapterNumber !== 0 && chapterNumber % 10 === 0) {
+      // 获取本地存储中的捐赠日期
       const storedDate = window.localStorage.getItem(DONATE_DATE)
+      // 将本地存储中的捐赠日期转换为 dayjs 对象
       const date = dayjs(storedDate)
+      // 获取当前日期
       const now = dayjs()
+      // 计算当前日期与捐赠日期之间的天数差
       const diff = now.diff(date, 'day')
+      // 如果本地存储中的捐赠日期不存在或与当前日期相差大于 60 天
       if (!storedDate || diff > 60) {
+        // 设置显示状态为 true
         setShow(true)
       }
     }
   }, [chapterNumber])
 
+  /**
+   * 返回捐赠卡片组件
+   * @returns 捐赠卡片组件
+   */
   return (
     <Transition.Root show={show} as={Fragment}>
       <Dialog

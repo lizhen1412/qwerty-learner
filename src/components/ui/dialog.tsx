@@ -4,14 +4,32 @@ import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { X } from 'lucide-react'
 import * as React from 'react'
 
+/**
+ * 对话框组件
+ * @returns 对话框组件
+ */
 const Dialog = DialogPrimitive.Root
 
+/**
+ * 对话框触发器
+ * @returns 对话框触发器
+ */
 const DialogTrigger = DialogPrimitive.Trigger
 
+/**
+ * 对话框门户
+ */
 const DialogPortal = DialogPrimitive.Portal
 
+/**
+ * 对话框关闭
+ * @returns 对话框关闭
+ */
 const DialogClose = DialogPrimitive.Close
 
+/**
+ * 对话框覆盖
+ */
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -27,6 +45,10 @@ const DialogOverlay = React.forwardRef<
 ))
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 
+/**
+ * 对话框内容
+ * @returns 对话框内容
+ */
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
@@ -51,16 +73,28 @@ const DialogContent = React.forwardRef<
 ))
 DialogContent.displayName = DialogPrimitive.Content.displayName
 
+/**
+ * 对话框头部
+ * @returns 对话框头部
+ */
 const DialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn('flex flex-col space-y-1.5 text-center sm:text-left', className)} {...props} />
 )
 DialogHeader.displayName = 'DialogHeader'
 
+/**
+ * 对话框底部
+ * @returns 对话框底部
+ */
 const DialogFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn('flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2', className)} {...props} />
 )
 DialogFooter.displayName = 'DialogFooter'
 
+/**
+ * 对话框标题
+ * @returns 对话框标题
+ */
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
@@ -69,6 +103,10 @@ const DialogTitle = React.forwardRef<
 ))
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
+/**
+ * 对话框描述
+ * @returns 对话框描述
+ */
 const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
@@ -77,6 +115,10 @@ const DialogDescription = React.forwardRef<
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
+/**
+ * 对话框组件
+ * @returns 对话框组件
+ */
 export {
   Dialog,
   DialogPortal,

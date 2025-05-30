@@ -6,6 +6,9 @@ import { useAtom, useAtomValue } from 'jotai'
 import { useMemo } from 'react'
 import useSWR from 'swr'
 
+/**
+ * 单词列表查询结果类型
+ */
 export type UseWordListResult = {
   words: WordWithIndex[]
   isLoading: boolean
@@ -16,8 +19,11 @@ export type UseWordListResult = {
  * Use word lists from the current selected dictionary.
  */
 export function useWordList(): UseWordListResult {
+  // 获取当前选中的词典信息
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  // 获取当前章节
   const [currentChapter, setCurrentChapter] = useAtom(currentChapterAtom)
+  // 获取复习模式信息
   const { isReviewMode, reviewRecord } = useAtomValue(reviewModeInfoAtom)
 
   // Reset current chapter to 0, when currentChapter is greater than chapterCount.
@@ -25,11 +31,18 @@ export function useWordList(): UseWordListResult {
     setCurrentChapter(0)
   }
 
+  // 是否是第一章
   const isFirstChapter = !isReviewMode && currentDictInfo.id === 'cet4' && currentChapter === 0
+  // 获取单词列表
   const { data: wordList, error, isLoading } = useSWR(currentDictInfo.url, wordListFetcher)
 
+  /**
+   * 处理单词列表
+   */
   const words: WordWithIndex[] = useMemo(() => {
+    // 处理单词列表
     let newWords: Word[]
+    // 如果当前是第一章
     if (isFirstChapter) {
       newWords = firstChapter
     } else if (isReviewMode) {
@@ -61,6 +74,9 @@ export function useWordList(): UseWordListResult {
   return { words, isLoading, error }
 }
 
+/**
+ * 第一章单词列表
+ */
 const firstChapter = [
   { name: 'cancel', trans: ['取消， 撤销； 删去'], usphone: "'kænsl", ukphone: "'kænsl" },
   { name: 'explosive', trans: ['爆炸的； 极易引起争论的', '炸药'], usphone: "ɪk'splosɪv; ɪk'splozɪv", ukphone: "ɪk'spləusɪv" },

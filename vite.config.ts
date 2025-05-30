@@ -9,11 +9,22 @@ import Icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
 import type { PluginOption } from 'vite'
 
+/**
+ * 配置
+ * @param param0 模式
+ * @returns 配置
+ */
 // https://vitejs.dev/config/
 export default defineConfig(async ({ mode }) => {
+  /**
+   * 最新提交哈希
+   */
   const latestCommitHash = await new Promise<string>((resolve) => {
     return getLastCommit((err, commit) => (err ? 'unknown' : resolve(commit.shortHash)))
   })
+  /**
+   * 配置
+   */
   return {
     plugins: [
       react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),
@@ -29,25 +40,27 @@ export default defineConfig(async ({ mode }) => {
       }),
     ],
     build: {
-      minify: true,
-      outDir: 'build',
-      sourcemap: false,
+      minify: true, // 压缩
+      outDir: 'build', // 输出目录
+      sourcemap: false, // 源码映射
     },
     esbuild: {
-      drop: mode === 'development' ? [] : ['console', 'debugger'],
+      drop: mode === 'development' ? [] : ['console', 'debugger'], // 删除 console 和 debugger
     },
     define: {
-      REACT_APP_DEPLOY_ENV: JSON.stringify(process.env.REACT_APP_DEPLOY_ENV),
-      LATEST_COMMIT_HASH: JSON.stringify(latestCommitHash + (process.env.NODE_ENV === 'production' ? '' : ' (dev)')),
+      // 定义环境变量
+      REACT_APP_DEPLOY_ENV: JSON.stringify(process.env.REACT_APP_DEPLOY_ENV), // 部署环境
+      // 最新提交哈希
+      LATEST_COMMIT_HASH: JSON.stringify(latestCommitHash + (process.env.NODE_ENV === 'production' ? '' : ' (dev)')), // 最新提交哈希
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src'),
+        '@': path.resolve(__dirname, 'src'), // 别名
       },
     },
     css: {
       modules: {
-        localsConvention: 'camelCaseOnly',
+        localsConvention: 'camelCaseOnly', // 本地约定
       },
     },
   }

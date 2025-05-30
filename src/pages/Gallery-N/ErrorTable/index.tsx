@@ -6,52 +6,85 @@ import type { SortingState } from '@tanstack/react-table'
 import { flexRender, getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
 import { useMemo, useState } from 'react'
 
+/**
+ * 数据表属性
+ */
 interface DataTableProps {
-  data: ErrorColumn[]
-  isLoading: boolean
-  error: unknown
-  onDelete: (word: string) => Promise<void>
+  data: ErrorColumn[] // 数据
+  isLoading: boolean // 是否加载
+  error: unknown // 错误
+  onDelete: (word: string) => Promise<void> // 删除单词
 }
 
+/**
+ * 错误表格
+ * @param param0 数据表属性
+ * @returns 错误表格
+ */
 export function ErrorTable({ data, isLoading, error, onDelete }: DataTableProps) {
+  /**
+   * 排序
+   */
   const [sorting, setSorting] = useState<SortingState>([])
+  /**
+   * 列
+   */
   const columns = useMemo(() => errorColumns(onDelete), [onDelete])
-
+  /**
+   * 表格
+   */
   const table = useReactTable({
-    data,
-    columns,
-    getCoreRowModel: getCoreRowModel(),
-    onSortingChange: setSorting,
-    getSortedRowModel: getSortedRowModel(),
+    data, // 数据
+    columns, // 列
+    getCoreRowModel: getCoreRowModel(), // 核心行模型
+    onSortingChange: setSorting, // 排序改变
+    getSortedRowModel: getSortedRowModel(), // 获取排序行模型
     state: {
-      sorting,
+      sorting, // 排序
     },
-    autoResetPageIndex: true,
+    autoResetPageIndex: true, // 自动重置页索引
   })
 
+  /**
+   * 返回错误表格
+   * @returns 错误表格
+   */
   return (
     <div className="h-full w-full rounded-md border p-1">
       <Table className="h-full w-full" {...{}}>
         <TableHeader className="sticky top-0 bg-white dark:bg-slate-900">
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
-                  <TableHead
-                    key={header.id}
-                    {...{
-                      colSpan: header.colSpan,
-                      style: {
-                        width: header.getSize(),
-                      },
-                    }}
-                  >
-                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
-                  </TableHead>
-                )
-              })}
-            </TableRow>
-          ))}
+          {
+            /**
+             * 获取表头组
+             */
+            table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {
+                  /**
+                   * 获取表头
+                   */
+                  headerGroup.headers.map((header) => {
+                    /**
+                     * 返回表头
+                     */
+                    return (
+                      <TableHead
+                        key={header.id}
+                        {...{
+                          colSpan: header.colSpan,
+                          style: {
+                            width: header.getSize(),
+                          },
+                        }}
+                      >
+                        {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
+                      </TableHead>
+                    )
+                  })
+                }
+              </TableRow>
+            ))
+          }
         </TableHeader>
         <TableBody className="w-full">
           {table.getRowModel().rows?.length ? (

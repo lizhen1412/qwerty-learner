@@ -18,37 +18,53 @@ export type ChapterData = {
   wordRecordIds: number[]
 }
 
+/**
+ * 用户输入日志
+ */
 export type UserInputLog = {
   // the index in ChapterData.words, not the index in WordWithIndex
   index: number
+  // 正确次数
   correctCount: number
+  // 错误次数
   wrongCount: number
+  // 字母错误信息
   LetterMistakes: LetterMistakes
 }
 
+/**
+ * 计时器数据
+ */
 export type TimerData = {
-  time: number
-  accuracy: number
-  wpm: number
+  time: number // 时间
+  accuracy: number // 准确率
+  wpm: number // 每分钟单词数
 }
 
+/**
+ * 错误单词数据
+ */
 export type WrongWordData = {
-  name: string
-  wrongCount: number
+  name: string // 单词名称
+  wrongCount: number // 错误次数
   wrongLetters: Array<{
-    letter: string
-    count: number
+    letter: string // 字母
+    count: number // 错误次数
   }>
 }
 
+/**
+ * 打字状态
+ */
 export type TypingState = {
-  chapterData: ChapterData
-  timerData: TimerData
-  isTyping: boolean
-  isFinished: boolean
-  isShowSkip: boolean
-  isTransVisible: boolean
-  isLoopSingleWord: boolean
+  chapterData: ChapterData // 章节数据
+  timerData: TimerData // 计时器数据
+  isTyping: boolean // 是否正在输入
+  isFinished: boolean // 是否完成
+  isShowSkip: boolean // 是否显示跳过按钮
+  isTransVisible: boolean // 是否显示翻译
+  isLoopSingleWord: boolean // 是否循环单个单词
   // 是否正在保存数据
   isSavingRecord: boolean
+  isWordVisible: boolean // 是否显示单词
 }

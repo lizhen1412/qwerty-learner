@@ -5,8 +5,15 @@ import { useAtomValue, useSetAtom } from 'jotai'
 import { useEffect, useState } from 'react'
 import useSound from 'use-sound'
 
+/**
+ * 播放函数
+ */
 export type PlayFunction = ReturnType<typeof useSound>[0]
 
+/**
+ * 使用按键声音
+ * @returns 播放函数
+ */
 export default function useKeySound(): [PlayFunction, PlayFunction, PlayFunction] {
   const { isOpen: isKeyOpen, isOpenClickSound, volume: keyVolume, resource: keyResource } = useAtomValue(keySoundsConfigAtom)
   const setKeySoundsConfig = useSetAtom(keySoundsConfigAtom)
@@ -20,6 +27,9 @@ export default function useKeySound(): [PlayFunction, PlayFunction, PlayFunction
   } = useAtomValue(hintSoundsConfigAtom)
   const [keySoundUrl, setKeySoundUrl] = useState(`${KEY_SOUND_URL_PREFIX}${keyResource.filename}`)
 
+  /**
+   * 使用 useEffect 监听按键声音
+   */
   useEffect(() => {
     if (!keySoundResources.some((item) => item.filename === keyResource.filename && item.key === keyResource.key)) {
       const defaultKeySoundResource = keySoundResources.find((item) => item.key === 'Default') || keySoundResources[0]
@@ -29,19 +39,26 @@ export default function useKeySound(): [PlayFunction, PlayFunction, PlayFunction
     }
   }, [keyResource, setKeySoundsConfig])
 
+  // 播放点击声音
   const [playClickSound] = useSound(keySoundUrl, {
     volume: keyVolume,
     interrupt: true,
   })
+  // 播放错误声音
   const [playWrongSound] = useSound(`${SOUND_URL_PREFIX}${wrongResource.filename}`, {
     volume: hintVolume,
     interrupt: true,
   })
+  // 播放正确声音
   const [playCorrectSound] = useSound(`${SOUND_URL_PREFIX}${correctResource.filename}`, {
     volume: hintVolume,
     interrupt: true,
   })
 
+  /**
+   * 返回播放函数
+   * @returns 播放函数
+   */
   return [
     isKeyOpen && isOpenClickSound ? playClickSound : noop,
     isHintOpen && isOpenWrongSound ? playWrongSound : noop,

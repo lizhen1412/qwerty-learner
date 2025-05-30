@@ -4,20 +4,40 @@ import { useAtom } from 'jotai'
 import { Fragment, useCallback } from 'react'
 import IconSpeakerWave from '~icons/heroicons/speaker-wave-solid'
 
+/**
+ * 声音开关
+ * 用于切换打字练习的声音
+ * @returns 声音开关
+ */
 export default function SoundSwitcher() {
+  /**
+   * 按键音配置
+   */
   const [keySoundsConfig, setKeySoundsConfig] = useAtom(keySoundsConfigAtom)
   const [hintSoundsConfig, setHintSoundsConfig] = useAtom(hintSoundsConfigAtom)
 
+  /**
+   * 切换按键音
+   */
   const onChangeKeySound = useCallback(
+    /**
+     * 切换按键音
+     */
     (checked: boolean) => {
-      setKeySoundsConfig((old) => ({ ...old, isOpen: checked }))
+      setKeySoundsConfig((old) => ({ ...old, isOpen: checked })) // 设置按键音配置
     },
     [setKeySoundsConfig],
   )
 
+  /**
+   * 切换效果音
+   */
   const onChangeHintSound = useCallback(
+    /**
+     * 切换效果音
+     */
     (checked: boolean) => {
-      setHintSoundsConfig((old) => ({ ...old, isOpen: checked }))
+      setHintSoundsConfig((old) => ({ ...old, isOpen: checked })) // 设置效果音配置
     },
     [setHintSoundsConfig],
   )

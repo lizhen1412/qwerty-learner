@@ -17,55 +17,137 @@ import IcOutlineCollectionsBookmark from '~icons/ic/outline-collections-bookmark
 import MajesticonsPaperFoldTextLine from '~icons/majesticons/paper-fold-text-line'
 import PajamasReviewList from '~icons/pajamas/review-list'
 
+/**
+ * 标签
+ */
 enum Tab {
-  Chapters = 'chapters',
-  Errors = 'errors',
-  Review = 'review',
+  Chapters = 'chapters', // 章节
+  Errors = 'errors', // 错误
+  Review = 'review', // 回顾
 }
 
+/**
+ * 词典详情
+ * @param param0 词典
+ * @returns 词典详情
+ */
 export default function DictDetail({ dictionary: dict }: { dictionary: Dictionary }) {
+  /**
+   * 当前章节
+   */
   const [currentChapter, setCurrentChapter] = useAtom(currentChapterAtom)
   const [currentDictId, setCurrentDictId] = useAtom(currentDictIdAtom)
   const [curTab, setCurTab] = useState<Tab>(Tab.Chapters)
+  /**
+   * 设置回顾模式信息
+   */
   const setReviewModeInfo = useSetAtom(reviewModeInfoAtom)
+  /**
+   * 导航
+   */
   const navigate = useNavigate()
+  /**
+   * 删除单词记录
+   */
   const { deleteWordRecord } = useDeleteWordRecord()
+  /**
+   * 重新加载
+   */
   const [reload, setReload] = useState(false)
 
+  /**
+   * 当前章节
+   */
   const chapter = useMemo(() => (dict.id === currentDictId ? currentChapter : 0), [currentChapter, currentDictId, dict.id])
+  /**
+   * 错误单词数据
+   */
   const { errorWordData, isLoading, error } = useErrorWordData(dict, reload)
-
+  /**
+   * 表格数据
+   */
   const tableData = useMemo(() => {
     return getRowsFromErrorWordData(errorWordData)
   }, [errorWordData])
 
+  /**
+   * 处理删除单词
+   */
   const onDelete = useCallback(
+    /**
+     * 处理删除单词
+     * @param word 单词
+     */
     async (word: string) => {
+      /**
+       * 删除单词记录
+       */
       await deleteWordRecord(word, dict.id)
+      /**
+       * 重新加载
+       */
       setReload((old) => !old)
     },
     [deleteWordRecord, dict.id],
   )
 
+  /**
+   * 处理章节改变
+   * @param index 章节
+   */
   const onChangeChapter = useCallback(
+    /**
+     * 设置当前章节
+     * @param index 章节
+     */
     (index: number) => {
+      /**
+       * 设置当前词典 ID
+       */
       setCurrentDictId(dict.id)
+      /**
+       * 设置当前章节
+       */
       setCurrentChapter(index)
+      /**
+       * 设置回顾模式信息
+       */
       setReviewModeInfo((old) => ({ ...old, isReviewMode: false }))
+      /**
+       * 导航到首页
+       */
       navigate('/')
     },
     [dict.id, navigate, setCurrentChapter, setCurrentDictId, setReviewModeInfo],
   )
 
+  /**
+   * 处理标签改变
+   * @param value 标签
+   */
   const handleTabChange = useCallback(
+    /**
+     * 处理标签改变
+     * @param value 标签
+     */
     (value: Tab) => {
+      /**
+       * 如果标签改变，则设置当前标签
+       */
       if (value !== curTab) {
+        /**
+         * 设置当前标签
+         */
         setCurTab(value)
       }
     },
     [curTab],
   )
 
+  /**
+   * 返回词典详情
+   * @returns 词典详情
+   */
   return (
     <div className="flex flex-col rounded-[4rem] px-4 py-3 pl-5 text-gray-800 dark:text-gray-300">
       <div className="text relative flex h-40 flex-col gap-2">

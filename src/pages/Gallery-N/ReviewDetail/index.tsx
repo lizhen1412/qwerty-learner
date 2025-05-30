@@ -9,26 +9,69 @@ import { useSetAtom } from 'jotai'
 import { useNavigate } from 'react-router-dom'
 import MdiRobotAngry from '~icons/mdi/robot-angry'
 
+/**
+ * 复习详情
+ * @param errorData 错误数据
+ * @param dict 词典
+ * @returns 复习详情
+ */
 export function ReviewDetail({ errorData, dict }: { errorData: TErrorWordData[]; dict: Dictionary }) {
+  /**
+   * 获取最新复习记录
+   */
   const latestReviewRecord = useGetLatestReviewRecord(dict.id)
+  /**
+   * 设置复习模式信息
+   */
   const setReviewModeInfo = useSetAtom(reviewModeInfoAtom)
+  /**
+   * 设置当前词典 ID
+   */
   const setCurrentDictId = useSetAtom(currentDictIdAtom)
-  const navigate = useNavigate()
+  /**
+   * 设置当前章节
+   */
   const setCurrentChapter = useSetAtom(currentChapterAtom)
+  /**
+   * 导航
+   */
+  const navigate = useNavigate()
 
+  /**
+   * 开始复习
+   */
   const startReview = async () => {
+    /**
+     * 设置当前词典 ID
+     */
     setCurrentDictId(dict.id)
+    /**
+     * 设置当前章节
+     */
     setCurrentChapter(-1)
 
+    /**
+     * 生成新的复习记录
+     */
     const record = await generateNewWordReviewRecord(dict.id, errorData)
+    /**
+     * 设置复习模式信息
+     */
     setReviewModeInfo({ isReviewMode: true, reviewRecord: record })
     navigate('/')
   }
 
+  /**
+   * 继续复习
+   */
   const continueReview = () => {
+    /**
+     * 设置当前词典 ID
+     */
     setCurrentDictId(dict.id)
-    setCurrentChapter(-1)
-
+    /**
+     * 设置复习模式信息
+     */
     setReviewModeInfo({ isReviewMode: true, reviewRecord: latestReviewRecord })
     navigate('/')
   }

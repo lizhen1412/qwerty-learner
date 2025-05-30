@@ -14,21 +14,41 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import IconX from '~icons/tabler/x'
 
+/**
+ * 错误书
+ * @returns 错误书
+ */
 export function ErrorBook() {
+  /**
+   * 分组记录
+   */
   const [groupedRecords, setGroupedRecords] = useState<groupedWordRecords[]>([])
   const [currentPage, setCurrentPage] = useState(1)
+  // 总共页数
   const totalPages = useMemo(() => Math.ceil(groupedRecords.length / ITEM_PER_PAGE), [groupedRecords.length])
+  /**
+   * 排序类型
+   */
   const [sortType, setSortType] = useState<ISortType>('asc')
   const navigate = useNavigate()
+  /**
+   * 当前行详情
+   */
   const currentRowDetail = useAtomValue(currentRowDetailAtom)
   const { deleteWordRecord } = useDeleteWordRecord()
   const [reload, setReload] = useState(false)
   const [paraphrases, setParaphrases] = useState<any[]>([])
 
+  /**
+   * 返回
+   */
   const onBack = useCallback(() => {
     navigate('/')
   }, [navigate])
 
+  /**
+   * 设置页数
+   */
   const setPage = useCallback(
     (page: number) => {
       if (page < 1 || page > totalPages) return
@@ -37,6 +57,9 @@ export function ErrorBook() {
     [totalPages],
   )
 
+  /**
+   * 设置排序
+   */
   const setSort = useCallback(
     (sortType: ISortType) => {
       setSortType(sortType)
@@ -45,6 +68,9 @@ export function ErrorBook() {
     [setPage],
   )
 
+  /**
+   * 排序记录
+   */
   const sortedRecords = useMemo(() => {
     if (sortType === 'none') return groupedRecords
     return [...groupedRecords].sort((a, b) => {
@@ -56,12 +82,18 @@ export function ErrorBook() {
     })
   }, [groupedRecords, sortType])
 
+  /**
+   * 渲染记录
+   */
   const renderRecords = useMemo(() => {
     const start = (currentPage - 1) * ITEM_PER_PAGE
     const end = start + ITEM_PER_PAGE
     return sortedRecords.slice(start, end)
   }, [currentPage, sortedRecords])
 
+  /**
+   * 使用 useEffect 监听分组记录
+   */
   useEffect(() => {
     db.wordRecords
       .where('wrongCount')
@@ -90,15 +122,25 @@ export function ErrorBook() {
       })
   }, [reload])
 
+  /**
+   * 删除单词
+   */
   const handleDelete = async (word: string, dict: string) => {
     await deleteWordRecord(word, dict)
     setReload((prev) => !prev)
   }
 
+  /**
+   * 更新单词
+   */
   const handleWordUpdate = (paraphrases: object) => {
     setParaphrases((prevWords) => [...prevWords, paraphrases])
   }
 
+  /**
+   * 返回错误书
+   * @returns 错误书
+   */
   return (
     <>
       <div className={`relative flex h-screen w-full flex-col items-center pb-4 ease-in ${currentRowDetail && 'blur-sm'}`}>

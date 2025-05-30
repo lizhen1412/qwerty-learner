@@ -2,8 +2,14 @@ import { Dialog, Transition } from '@headlessui/react'
 import classNames from 'classnames'
 import { Fragment } from 'react'
 
+/**
+ * 抽屉位置
+ */
 export type Placement = 'left' | 'top' | 'right' | 'bottom'
 
+/**
+ * 抽屉属性
+ */
 interface DrawerProps {
   open?: boolean
   placement?: Placement
@@ -12,12 +18,21 @@ interface DrawerProps {
   classNames?: string
 }
 
+/**
+ * 过渡方向映射
+ */
 const transitionDirectionMap = {
   left: '-translate-x-full',
   right: 'translate-x-full',
   top: '-translate-y-full',
   bottom: 'translate-y-full',
 }
+
+/**
+ * 抽屉组件
+ * @param props 抽屉属性
+ * @returns 抽屉组件
+ */
 export default function Drawer(props: DrawerProps) {
   const { open = false, placement = 'left', onClose, children } = props
 

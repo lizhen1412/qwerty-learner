@@ -5,13 +5,32 @@ import * as Progress from '@radix-ui/react-progress'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import { useCallback, useState } from 'react'
 
+/**
+ * 数据设置
+ * 用于设置打字练习的数据
+ * @returns 数据设置
+ */
 export default function DataSetting() {
+  /**
+   * 是否正在导出
+   */
   const [isExporting, setIsExporting] = useState(false)
+  /**
+   * 导出进度
+   */
   const [exportProgress, setExportProgress] = useState(0)
-
+  /**
+   * 是否正在导入
+   */
   const [isImporting, setIsImporting] = useState(false)
+  /**
+   * 导入进度
+   */
   const [importProgress, setImportProgress] = useState(0)
 
+  /**
+   * 导出进度回调
+   */
   const exportProgressCallback = useCallback(({ totalRows, completedRows, done }: ExportProgress) => {
     if (done) {
       setIsExporting(false)
@@ -25,32 +44,50 @@ export default function DataSetting() {
     return true
   }, [])
 
+  /**
+   * 点击导出
+   */
   const onClickExport = useCallback(() => {
-    setExportProgress(0)
-    setIsExporting(true)
-    exportDatabase(exportProgressCallback)
+    setExportProgress(0) // 设置导出进度为0
+    setIsExporting(true) // 设置是否正在导出
+    exportDatabase(exportProgressCallback) // 导出数据库
   }, [exportProgressCallback])
 
+  /**
+   * 导入进度回调
+   */
   const importProgressCallback = useCallback(({ totalRows, completedRows, done }: ImportProgress) => {
+    /**
+     * 如果导入完成
+     */
     if (done) {
-      setIsImporting(false)
-      setImportProgress(100)
-      return true
+      setIsImporting(false) // 设置是否正在导入
+      setImportProgress(100) // 设置导入进度为100
+      return true // 返回true
     }
+    /**
+     * 如果总行数大于0
+     */
     if (totalRows) {
-      setImportProgress(Math.floor((completedRows / totalRows) * 100))
+      setImportProgress(Math.floor((completedRows / totalRows) * 100)) // 设置导入进度
     }
 
     return true
   }, [])
 
+  /**
+   * 开始导入
+   */
   const onStartImport = useCallback(() => {
-    setImportProgress(0)
-    setIsImporting(true)
+    setImportProgress(0) // 设置导入进度为0
+    setIsImporting(true) // 设置是否正在导入
   }, [])
 
+  /**
+   * 点击导入
+   */
   const onClickImport = useCallback(() => {
-    importDatabase(onStartImport, importProgressCallback)
+    importDatabase(onStartImport, importProgressCallback) // 导入数据库
   }, [importProgressCallback, onStartImport])
 
   return (

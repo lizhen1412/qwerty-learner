@@ -23,10 +23,20 @@ import IconCoffee from '~icons/tabler/coffee'
 import IconTerminal2 from '~icons/tabler/terminal-2'
 import IconFlagChina from '~icons/twemoji/flag-china'
 
+/**
+ * 底部组件
+ * @returns 底部组件
+ */
 const Footer: React.FC = () => {
+  // 信息面板状态
   const [infoPanelState, setInfoPanelState] = useAtom(infoPanelStateAtom)
+  // 导航
   const navigate = useNavigate()
 
+  /**
+   * 打开信息面板
+   * @param modalType 信息面板类型
+   */
   const handleOpenInfoPanel = useCallback(
     (modalType: InfoPanelType) => {
       recordOpenInfoPanelAction(modalType, 'footer')
@@ -35,6 +45,10 @@ const Footer: React.FC = () => {
     [setInfoPanelState],
   )
 
+  /**
+   * 关闭信息面板
+   * @param modalType 信息面板类型
+   */
   const handleCloseInfoPanel = useCallback(
     (modalType: InfoPanelType) => {
       setInfoPanelState((state) => ({ ...state, [modalType]: false }))
@@ -42,8 +56,13 @@ const Footer: React.FC = () => {
     [setInfoPanelState],
   )
 
+  /**
+   * 返回底部组件
+   * @returns 底部组件
+   */
   return (
     <>
+      {/* 捐赠面板 */}
       <InfoPanel
         openState={infoPanelState.donate}
         title="Buy us a coffee"

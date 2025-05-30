@@ -9,6 +9,10 @@ import IconEye from '~icons/heroicons/eye-solid'
 import IconCheck from '~icons/tabler/check'
 import IconChevronDown from '~icons/tabler/chevron-down'
 
+/**
+ * 单词默写类型列表
+ * 用于显示单词默写类型
+ */
 const wordDictationTypeList: { name: string; type: WordDictationType }[] = [
   {
     name: '全部隐藏',
@@ -28,11 +32,22 @@ const wordDictationTypeList: { name: string; type: WordDictationType }[] = [
   },
 ]
 
+/**
+ * 单词默写开关
+ * 用于切换单词默写模式
+ * @returns 单词默写开关
+ */
 export default function WordDictationSwitcher() {
   const [wordDictationConfig, setWordDictationConfig] = useAtom(wordDictationConfigAtom)
   const [currentType, setCurrentType] = useState(wordDictationTypeList[0])
 
+  /**
+   * 切换单词听写模式的开关状态
+   * - 当开启时记录是用户主动操作
+   * - 保持其他配置项不变
+   */
   const onToggleWordDictation = () => {
+    // 如果单词听写模式关闭，则设置为开启，并记录是用户主动操作
     setWordDictationConfig((old) => {
       if (!old.isOpen) {
         return { ...old, isOpen: !old.isOpen, openBy: 'user' }
@@ -42,16 +57,26 @@ export default function WordDictationSwitcher() {
     })
   }
 
+  /**
+   * 切换单词默写类型
+   * @param value 单词默写类型
+   */
   const onChangeWordDictationType = (value: WordDictationType) => {
     setWordDictationConfig((old) => {
       return { ...old, type: value }
     })
   }
 
+  /**
+   * 设置当前单词默写类型
+   */
   useLayoutEffect(() => {
     setCurrentType(wordDictationTypeList.find((item) => item.type === wordDictationConfig.type) || wordDictationTypeList[0])
   }, [wordDictationConfig.type])
 
+  /**
+   * 使用热键
+   */
   useHotkeys(
     'ctrl+v',
     () => {

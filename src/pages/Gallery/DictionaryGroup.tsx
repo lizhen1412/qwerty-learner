@@ -2,7 +2,16 @@ import DictionaryCard from './DictionaryCard'
 import type { Dictionary } from '@/typings'
 import type React from 'react'
 
+/**
+ * 词典组
+ * @param param0
+ * @returns
+ */
 const DictionaryGroup: React.FC<DictionaryGroupProps> = ({ title, dictionaries }) => {
+  /**
+   * 返回词典组
+   * @returns 词典组
+   */
   return (
     <section className="mb-4 mr-1">
       <h3 className="sticky top-0 z-30 bg-indigo-50 pb-2 text-sm font-bold text-gray-600 dark:bg-slate-800 dark:text-white dark:text-opacity-60">

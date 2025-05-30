@@ -7,16 +7,37 @@ import { Fragment, useCallback, useState } from 'react'
 import IconRepeat from '~icons/tabler/repeat'
 import IconRepeatOff from '~icons/tabler/repeat-off'
 
+/**
+ * 循环次数选项
+ */
 const loopOptions: LoopWordTimesOption[] = [1, 3, 5, 8, Number.MAX_SAFE_INTEGER]
+
+/**
+ * 循环次数切换器
+ * @returns 循环次数切换器
+ */
 export default function LoopWordSwitcher() {
+  /**
+   * 循环次数
+   */
   const [{ times: loopTimes }, setLoopWordConfig] = useAtom(loopWordConfigAtom)
+  /**
+   * 是否打开
+   */
   const [isOpen, setIsOpen] = useState(false)
 
+  /**
+   * 切换循环次数
+   * @param value 循环次数
+   */
   const onChangeLoopTimes = useCallback(
     (value: number) => {
+      /**
+       * 设置循环次数
+       */
       setLoopWordConfig((old) => ({
-        ...old,
-        times: value,
+        ...old, // 设置循环次数
+        times: value, // 设置循环次数
       }))
     },
     [setLoopWordConfig],

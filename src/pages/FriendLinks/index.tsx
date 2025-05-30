@@ -4,7 +4,14 @@ import kk from '@/assets/friendlinks/kk.jpg'
 import web_worker from '@/assets/friendlinks/web-worker.png'
 import type React from 'react'
 
+/**
+ * 友情链接
+ * @returns 友情链接
+ */
 export const FriendLinks: React.FC = () => {
+  /**
+   * 链接
+   */
   const links = [
     {
       title: 'ez背单词',

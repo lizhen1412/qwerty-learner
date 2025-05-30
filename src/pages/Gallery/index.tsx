@@ -11,10 +11,26 @@ import type React from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { NavLink, useNavigate } from 'react-router-dom'
 
+/**
+ * 词典选择
+ * @returns 词典选择
+ */
 const GalleryPage: React.FC = () => {
+  /**
+   * 当前词典信息
+   */
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  /**
+   * 词典组
+   */
   const groups = Object.entries(groupBy(dictionaries, (dict) => dict.category))
+  /**
+   * 导航
+   */
   const navigate = useNavigate()
+  /**
+   * 使用热键
+   */
   useHotkeys(
     'enter,esc',
     () => {
@@ -23,6 +39,10 @@ const GalleryPage: React.FC = () => {
     { preventDefault: true },
   )
 
+  /**
+   * 返回词典选择
+   * @returns 词典选择
+   */
   return (
     <Layout>
       <Header>
