@@ -4100,6 +4100,20 @@ const indonesianDicts: DictionaryResource[] = [
   },
 ]
 
+const themeDicts: DictionaryResource[] = [
+  {
+    id: 'theme_months',
+    name: '月份',
+    description: '12个月份的英文名称',
+    category: '根据主题',
+    tags: ['通用'],
+    url: '/dicts/theme_months.json',
+    length: 12,
+    language: 'en',
+    languageCategory: 'en',
+  },
+]
+
 /**
  * Built-in dictionaries in an array.
  * Why arrays? Because it keeps the order across browsers.
@@ -4113,6 +4127,7 @@ export const dictionaryResources: DictionaryResource[] = [
   ...germanExam,
   ...kazakhHapinDicts,
   ...indonesianDicts,
+  ...themeDicts,
 
   // {
   //   id: 'zhtest',

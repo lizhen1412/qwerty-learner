@@ -1,0 +1,50 @@
+[
+    {
+        "name": "January",
+        "trans": "一月"
+    },
+    {
+        "name": "February",
+        "trans": "二月"
+    },
+    {
+        "name": "March",
+        "trans": "三月"
+    },
+    {
+        "name": "April",
+        "trans": "四月"
+    },
+    {
+        "name": "May",
+        "trans": "五月"
+    },
+    {
+        "name": "June",
+        "trans": "六月"
+    },
+    {
+        "name": "July",
+        "trans": "七月"
+    },
+    {
+        "name": "August",
+        "trans": "八月"
+    },
+    {
+        "name": "September",
+        "trans": "九月"
+    },
+    {
+        "name": "October",
+        "trans": "十月"
+    },
+    {
+        "name": "November",
+        "trans": "十一月"
+    },
+    {
+        "name": "December",
+        "trans": "十二月"
+    }
+]
