@@ -1,0 +1,1241 @@
+[
+    {
+        "name": "Algeria",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Argentina",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Armenia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Australia",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Austria",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Azerbaijan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Bahrain",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Bangladesh",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Belarus",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Belgium",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Benin",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Bhutan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Bolivia",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Bosnia and Herzegovina",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Botswana",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Brazil",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Brunei Darussalam",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Bulgaria",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Burkina Faso",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Burundi",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Cambodia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Cameroon",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Canada",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Cape Verde",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Cayman Islands",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Central African Republic",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Chad",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Chile",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "China",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Colombia",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Comoros",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Congo",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Congo, The Democratic Republic of the",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Costa Rica",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Cote D'Ivoire",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Croatia",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Cuba",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Curacao",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Cyprus",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Czech Republic",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Denmark",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Djibouti",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Dominica",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Dominican Republic",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Ecuador",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Egypt",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "El Salvador",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Estonia",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Ethiopia",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Fiji",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Finland",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "France",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Gambia",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Georgia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Germany",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Ghana",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Greece",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Grenada",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Guatemala",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Guernsey",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Guinea",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Guinea-Bissau",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Guyana",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Haiti",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Honduras",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Hong Kong",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Hungary",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Iceland",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "India",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Indonesia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Iran, Islamic Republic of",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Iraq",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Ireland",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Isle of Man",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Israel",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Italy",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Jamaica",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Japan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Jordan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Kazakhstan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Kenya",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Kuwait",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Kyrgyzstan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Lao People's Democratic Republic",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Latvia",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Lebanon",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Lesotho",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Liberia",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Libya",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Lithuania",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Luxembourg",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Macao",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Madagascar",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Malawi",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Malaysia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Maldives",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Mali",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Malta",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Mauritania",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Mauritius",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Mexico",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Moldova, Republic of",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Mongolia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Montenegro",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Morocco",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Mozambique",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Myanmar",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Namibia",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Nepal",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Netherlands",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "New Zealand",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Nicaragua",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Niger",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Nigeria",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "North Macedonia",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Norway",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Oman",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Pakistan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Palestinian Territory, Occupied",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Panama",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Papua New Guinea",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Paraguay",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Peru",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Philippines",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Poland",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Portugal",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Qatar",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Romania",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Russian Federation",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Rwanda",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Saint Kitts and Nevis",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Saint Lucia",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Saint Martin",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Saint Vincent and the Grenadines",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Samoa",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Sao Tome and Principe",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Saudi Arabia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Senegal",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Serbia",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Seychelles",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Sierra Leone",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Singapore",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Slovakia",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Slovenia",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Somalia",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "South Africa",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "South Sudan",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Spain",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Sri Lanka",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Sudan",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Suriname",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Sweden",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Switzerland",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Syrian Arab Republic",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Taiwan, China",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Tajikistan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Tanzania, United Republic of",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Thailand",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Timor-Leste",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Togo",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Tonga",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Trinidad and Tobago",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Tunisia",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Turkey",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Turkmenistan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Uganda",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Ukraine",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "United Arab Emirates",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "United Kingdom",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "United States",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Uruguay",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Uzbekistan",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Venezuela",
+        "trans": [
+            "南美洲"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Viet Nam",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Yemen",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Zambia",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Zimbabwe",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    }
+]

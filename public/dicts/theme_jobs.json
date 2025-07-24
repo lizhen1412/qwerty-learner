@@ -1,0 +1,457 @@
+[
+    {
+        "name": "Doctor",
+        "trans": [
+            "医生"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Nurse",
+        "trans": [
+            "护士"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Dentist",
+        "trans": [
+            "牙医"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Pharmacist",
+        "trans": [
+            "药剂师"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Surgeon",
+        "trans": [
+            "外科医生"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Veterinarian",
+        "trans": [
+            "兽医"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Therapist",
+        "trans": [
+            "治疗师"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Teacher",
+        "trans": [
+            "教师"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Professor",
+        "trans": [
+            "教授"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Principal",
+        "trans": [
+            "校长"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Tutor",
+        "trans": [
+            "家教"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Librarian",
+        "trans": [
+            "图书管理员"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Researcher",
+        "trans": [
+            "研究员"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Software Engineer",
+        "trans": [
+            "软件工程师"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Web Developer",
+        "trans": [
+            "前端开发"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Data Scientist",
+        "trans": [
+            "数据科学家"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "System Administrator",
+        "trans": [
+            "系统管理员"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "UI/UX Designer",
+        "trans": [
+            "界面/体验设计师"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Product Manager",
+        "trans": [
+            "产品经理"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Artist",
+        "trans": [
+            "艺术家"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Musician",
+        "trans": [
+            "音乐家"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Actor",
+        "trans": [
+            "演员"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Photographer",
+        "trans": [
+            "摄影师"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Journalist",
+        "trans": [
+            "记者"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Writer",
+        "trans": [
+            "作家"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Director",
+        "trans": [
+            "导演"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Waiter/Waitress",
+        "trans": [
+            "服务员"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Chef",
+        "trans": [
+            "厨师"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Barista",
+        "trans": [
+            "咖啡师"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Receptionist",
+        "trans": [
+            "前台"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Cashier",
+        "trans": [
+            "收银员"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Hotel Manager",
+        "trans": [
+            "酒店经理"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Architect",
+        "trans": [
+            "建筑师"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Civil Engineer",
+        "trans": [
+            "土木工程师"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Construction Worker",
+        "trans": [
+            "建筑工人"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Electrician",
+        "trans": [
+            "电工"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Plumber",
+        "trans": [
+            "管道工"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Carpenter",
+        "trans": [
+            "木匠"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Driver",
+        "trans": [
+            "司机"
+        ],
+        "chapter": 7
+    },
+    {
+        "name": "Pilot",
+        "trans": [
+            "飞行员"
+        ],
+        "chapter": 7
+    },
+    {
+        "name": "Flight Attendant",
+        "trans": [
+            "空乘"
+        ],
+        "chapter": 7
+    },
+    {
+        "name": "Sailor",
+        "trans": [
+            "水手"
+        ],
+        "chapter": 7
+    },
+    {
+        "name": "Train Conductor",
+        "trans": [
+            "列车员"
+        ],
+        "chapter": 7
+    },
+    {
+        "name": "Delivery Person",
+        "trans": [
+            "快递员"
+        ],
+        "chapter": 7
+    },
+    {
+        "name": "Lawyer",
+        "trans": [
+            "律师"
+        ],
+        "chapter": 8
+    },
+    {
+        "name": "Judge",
+        "trans": [
+            "法官"
+        ],
+        "chapter": 8
+    },
+    {
+        "name": "Police Officer",
+        "trans": [
+            "警察"
+        ],
+        "chapter": 8
+    },
+    {
+        "name": "Accountant",
+        "trans": [
+            "会计"
+        ],
+        "chapter": 8
+    },
+    {
+        "name": "Banker",
+        "trans": [
+            "银行家"
+        ],
+        "chapter": 8
+    },
+    {
+        "name": "Financial Analyst",
+        "trans": [
+            "金融分析师"
+        ],
+        "chapter": 8
+    },
+    {
+        "name": "Athlete",
+        "trans": [
+            "运动员"
+        ],
+        "chapter": 9
+    },
+    {
+        "name": "Coach",
+        "trans": [
+            "教练"
+        ],
+        "chapter": 9
+    },
+    {
+        "name": "Referee",
+        "trans": [
+            "裁判"
+        ],
+        "chapter": 9
+    },
+    {
+        "name": "Lifeguard",
+        "trans": [
+            "救生员"
+        ],
+        "chapter": 9
+    },
+    {
+        "name": "Personal Trainer",
+        "trans": [
+            "私人教练"
+        ],
+        "chapter": 9
+    },
+    {
+        "name": "Farmer",
+        "trans": [
+            "农民"
+        ],
+        "chapter": 10
+    },
+    {
+        "name": "Gardener",
+        "trans": [
+            "园丁"
+        ],
+        "chapter": 10
+    },
+    {
+        "name": "Fisherman",
+        "trans": [
+            "渔民"
+        ],
+        "chapter": 10
+    },
+    {
+        "name": "Forester",
+        "trans": [
+            "林务员"
+        ],
+        "chapter": 10
+    },
+    {
+        "name": "Rancher",
+        "trans": [
+            "牧场主"
+        ],
+        "chapter": 10
+    },
+    {
+        "name": "Soldier",
+        "trans": [
+            "士兵"
+        ],
+        "chapter": 11
+    },
+    {
+        "name": "Firefighter",
+        "trans": [
+            "消防员"
+        ],
+        "chapter": 11
+    },
+    {
+        "name": "Civil Servant",
+        "trans": [
+            "公务员"
+        ],
+        "chapter": 11
+    },
+    {
+        "name": "Mayor",
+        "trans": [
+            "市长"
+        ],
+        "chapter": 11
+    },
+    {
+        "name": "Diplomat",
+        "trans": [
+            "外交官"
+        ],
+        "chapter": 11
+    }
+]

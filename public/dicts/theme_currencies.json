@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dollar",
+        "trans": [
+            "美元"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Pound Sterling",
+        "trans": [
+            "英镑"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Pound",
+        "trans": [
+            "磅"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Euro",
+        "trans": [
+            "欧元"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Yen",
+        "trans": [
+            "日元"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Yuan",
+        "trans": [
+            "元"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Renminbi",
+        "trans": [
+            "人民币"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Franc",
+        "trans": [
+            "法郎"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Rupee",
+        "trans": [
+            "卢比"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Won",
+        "trans": [
+            "韩元"
+        ],
+        "chapter": 1
+    }
+]

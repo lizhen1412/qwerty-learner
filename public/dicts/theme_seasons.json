@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Spring",
+        "trans": "春"
+    },
+    {
+        "name": "Summer",
+        "trans": "夏"
+    },
+    {
+        "name": "Autumn",
+        "trans": "秋"
+    },
+    {
+        "name": "Fall",
+        "trans": "秋"
+    },
+    {
+        "name": "Winter",
+        "trans": "冬"
+    }
+]

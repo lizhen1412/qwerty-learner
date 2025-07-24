@@ -1,0 +1,261 @@
+[
+    {
+        "name": "banana",
+        "trans": [
+            "香蕉"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "orange",
+        "trans": [
+            "橙子"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "grape",
+        "trans": [
+            "葡萄"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "watermelon",
+        "trans": [
+            "西瓜"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "strawberry",
+        "trans": [
+            "草莓"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "potato",
+        "trans": [
+            "土豆"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "tomato",
+        "trans": [
+            "番茄"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "carrot",
+        "trans": [
+            "胡萝卜"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "onion",
+        "trans": [
+            "洋葱"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "lettuce",
+        "trans": [
+            "生菜"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "cucumber",
+        "trans": [
+            "黄瓜"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "cheese",
+        "trans": [
+            "芝士"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "chicken",
+        "trans": [
+            "鸡肉"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "pork",
+        "trans": [
+            "猪肉"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "beef",
+        "trans": [
+            "牛肉"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "lamb",
+        "trans": [
+            "羊肉"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "fish",
+        "trans": [
+            "鱼"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "shrimp",
+        "trans": [
+            "虾"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "milk",
+        "trans": [
+            "牛奶"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "bread",
+        "trans": [
+            "面包"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "rice",
+        "trans": [
+            "米饭"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "noodles",
+        "trans": [
+            "面条"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "tofu",
+        "trans": [
+            "豆腐"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "sugar",
+        "trans": [
+            "糖"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "salt",
+        "trans": [
+            "盐"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "pepper",
+        "trans": [
+            "胡椒"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "oil",
+        "trans": [
+            "油"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "butter",
+        "trans": [
+            "黄油"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "yogurt",
+        "trans": [
+            "酸奶"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "ice cream",
+        "trans": [
+            "冰淇淋"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "cake",
+        "trans": [
+            "蛋糕"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "chocolate",
+        "trans": [
+            "巧克力"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "coffee",
+        "trans": [
+            "咖啡"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "tea",
+        "trans": [
+            "茶"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "juice",
+        "trans": [
+            "果汁"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "wine",
+        "trans": [
+            "葡萄酒"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "beer",
+        "trans": [
+            "啤酒"
+        ],
+        "chapter": 3
+    }
+]
