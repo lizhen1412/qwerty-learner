@@ -1,15 +1,21 @@
 [
     {
         "name": "Water",
-        "trans": "水"
+        "trans": [
+            "水"
+        ]
     },
     {
         "name": "Mineral Water",
-        "trans": "矿泉水"
+        "trans": [
+            "矿泉水"
+        ]
     },
     {
         "name": "Sparkling Water",
-        "trans": "气泡水"
+        "trans": [
+            "气泡水"
+        ]
     },
     {
         "name": "Coconut Water",
@@ -17,47 +23,69 @@
     },
     {
         "name": "Milk",
-        "trans": "牛奶"
+        "trans": [
+            "牛奶"
+        ]
     },
     {
         "name": "Soy Milk",
-        "trans": "豆浆"
+        "trans": [
+            "豆浆"
+        ]
     },
     {
         "name": "Yogurt",
-        "trans": "酸奶"
+        "trans": [
+            "酸奶"
+        ]
     },
     {
         "name": "Milkshake",
-        "trans": "奶昔"
+        "trans": [
+            "奶昔"
+        ]
     },
     {
         "name": "Bubble Tea",
-        "trans": "珍珠奶茶"
+        "trans": [
+            "珍珠奶茶"
+        ]
     },
     {
         "name": "Milk Tea",
-        "trans": "奶茶"
+        "trans": [
+            "奶茶"
+        ]
     },
     {
         "name": "Coffee",
-        "trans": "咖啡"
+        "trans": [
+            "咖啡"
+        ]
     },
     {
         "name": "Latte",
-        "trans": "拿铁"
+        "trans": [
+            "拿铁"
+        ]
     },
     {
         "name": "Espresso",
-        "trans": "浓缩咖啡"
+        "trans": [
+            "浓缩咖啡"
+        ]
     },
     {
         "name": "Cappuccino",
-        "trans": "卡布奇诺"
+        "trans": [
+            "卡布奇诺"
+        ]
     },
     {
         "name": "Mocha",
-        "trans": "摩卡"
+        "trans": [
+            "摩卡"
+        ]
     },
     {
         "name": "Americano",
@@ -65,11 +93,15 @@
     },
     {
         "name": "Tea",
-        "trans": "茶"
+        "trans": [
+            "茶"
+        ]
     },
     {
         "name": "Green Tea",
-        "trans": "绿茶"
+        "trans": [
+            "绿茶"
+        ]
     },
     {
         "name": "Black Tea",
@@ -77,118 +109,176 @@
     },
     {
         "name": "Herbal Tea",
-        "trans": "花草茶"
+        "trans": [
+            "花草茶"
+        ]
     },
     {
         "name": "Barley Tea",
-        "trans": "大麦茶"
+        "trans": [
+            "大麦茶"
+        ]
     },
     {
         "name": "Iced Tea",
-        "trans": "冰茶"
+        "trans": [
+            "冰茶"
+        ]
     },
     {
         "name": "Matcha",
-        "trans": "抹茶"
+        "trans": [
+            "抹茶"
+        ]
     },
     {
         "name": "Juice",
-        "trans": "果汁"
+        "trans": [
+            "果汁"
+        ]
     },
     {
         "name": "Orange Juice",
-        "trans": "橙汁"
+        "trans": [
+            "橙汁"
+        ]
     },
     {
         "name": "Apple Juice",
-        "trans": "苹果汁"
+        "trans": [
+            "苹果汁"
+        ]
     },
     {
         "name": "Grape Juice",
-        "trans": "葡萄汁"
+        "trans": [
+            "葡萄汁"
+        ]
     },
     {
         "name": "Lemonade",
-        "trans": "柠檬水"
+        "trans": [
+            "柠檬水"
+        ]
     },
     {
         "name": "Smoothie",
-        "trans": "冰沙"
+        "trans": [
+            "冰沙"
+        ]
     },
     {
         "name": "Soda",
-        "trans": "汽水"
+        "trans": [
+            "汽水"
+        ]
     },
     {
         "name": "Cola",
-        "trans": "可乐"
+        "trans": [
+            "可乐"
+        ]
     },
     {
         "name": "Energy Drink",
-        "trans": "能量饮料"
+        "trans": [
+            "能量饮料"
+        ]
     },
     {
         "name": "Sports Drink",
-        "trans": "运动饮料"
+        "trans": [
+            "运动饮料"
+        ]
     },
     {
         "name": "Beer",
-        "trans": "啤酒"
+        "trans": [
+            "啤酒"
+        ]
     },
     {
         "name": "Wine",
-        "trans": "葡萄酒"
+        "trans": [
+            "葡萄酒"
+        ]
     },
     {
         "name": "Red Wine",
-        "trans": "红葡萄酒"
+        "trans": [
+            "红葡萄酒"
+        ]
     },
     {
         "name": "White Wine",
-        "trans": "白葡萄酒"
+        "trans": [
+            "白葡萄酒"
+        ]
     },
     {
         "name": "Champagne",
-        "trans": "香槟"
+        "trans": [
+            "香槟"
+        ]
     },
     {
         "name": "Cider",
-        "trans": "苹果酒"
+        "trans": [
+            "苹果酒"
+        ]
     },
     {
         "name": "Cocktail",
-        "trans": "鸡尾酒"
+        "trans": [
+            "鸡尾酒"
+        ]
     },
     {
         "name": "Whiskey",
-        "trans": "威士忌"
+        "trans": [
+            "威士忌"
+        ]
     },
     {
         "name": "Brandy",
-        "trans": "白兰地"
+        "trans": [
+            "白兰地"
+        ]
     },
     {
         "name": "Vodka",
-        "trans": "伏特加"
+        "trans": [
+            "伏特加"
+        ]
     },
     {
         "name": "Gin",
-        "trans": "金酒"
+        "trans": [
+            "金酒"
+        ]
     },
     {
         "name": "Rum",
-        "trans": "朗姆酒"
+        "trans": [
+            "朗姆酒"
+        ]
     },
     {
         "name": "Sake",
-        "trans": "清酒"
+        "trans": [
+            "清酒"
+        ]
     },
     {
         "name": "Rice Wine",
-        "trans": "米酒"
+        "trans": [
+            "米酒"
+        ]
     },
     {
         "name": "Hot Chocolate",
-        "trans": "热巧克力"
+        "trans": [
+            "热巧克力"
+        ]
     }
 ]
