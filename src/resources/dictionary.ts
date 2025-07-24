@@ -4102,7 +4102,7 @@ const indonesianDicts: DictionaryResource[] = [
 
 const themeDicts: DictionaryResource[] = [
   {
-    id: 'theme_months',
+    id: 'theme_months_en_12',
     name: '月份',
     description: '12个月份的英文名称',
     category: '根据主题',
