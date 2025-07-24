@@ -1,155 +1,22 @@
 [
     {
-        "name": "Algeria",
+        "name": "United Kingdom",
         "trans": [
-            "阿尔及利亚"
+            "英国"
         ],
         "chapter": 1
     },
     {
-        "name": "Argentina",
+        "name": "United States",
         "trans": [
-            "阿根廷"
+            "美国"
         ],
-        "chapter": 6
-    },
-    {
-        "name": "Armenia",
-        "trans": [
-            "亚美尼亚"
-        ],
-        "chapter": 2
+        "chapter": 1
     },
     {
         "name": "Australia",
         "trans": [
             "澳大利亚"
-        ],
-        "chapter": 5
-    },
-    {
-        "name": "Austria",
-        "trans": [
-            "奥地利"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Azerbaijan",
-        "trans": [
-            "阿塞拜疆"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Bahrain",
-        "trans": [
-            "巴林"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Bangladesh",
-        "trans": [
-            "孟加拉国"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Belarus",
-        "trans": [
-            "白俄罗斯"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Belgium",
-        "trans": [
-            "比利时"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Benin",
-        "trans": [
-            "贝宁"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Bhutan",
-        "trans": [
-            "不丹"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Bolivia",
-        "trans": [
-            "玻利维亚"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Bosnia and Herzegovina",
-        "trans": [
-            "波斯尼亚和黑塞哥维那"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Botswana",
-        "trans": [
-            "博茨瓦纳"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Brazil",
-        "trans": [
-            "巴西"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Brunei Darussalam",
-        "trans": [
-            "文莱达鲁萨兰国"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Bulgaria",
-        "trans": [
-            "保加利亚"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Burkina Faso",
-        "trans": [
-            "布基纳法索"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Burundi",
-        "trans": [
-            "布隆迪"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Cambodia",
-        "trans": [
-            "柬埔寨"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Cameroon",
-        "trans": [
-            "喀麦隆"
         ],
         "chapter": 1
     },
@@ -158,327 +25,187 @@
         "trans": [
             "加拿大"
         ],
-        "chapter": 4
-    },
-    {
-        "name": "Cape Verde",
-        "trans": [
-            "佛得角"
-        ],
         "chapter": 1
     },
     {
-        "name": "Cayman Islands",
+        "name": "New Zealand",
         "trans": [
-            "开曼群岛"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Central African Republic",
-        "trans": [
-            "中非共和国"
+            "新西兰"
         ],
         "chapter": 1
-    },
-    {
-        "name": "Chad",
-        "trans": [
-            "乍得"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Chile",
-        "trans": [
-            "智利"
-        ],
-        "chapter": 6
     },
     {
         "name": "China",
         "trans": [
             "中国"
         ],
-        "chapter": 2
-    },
-    {
-        "name": "Colombia",
-        "trans": [
-            "哥伦比亚"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Comoros",
-        "trans": [
-            "科摩罗"
-        ],
         "chapter": 1
     },
     {
-        "name": "Congo",
+        "name": "Japan",
         "trans": [
-            "刚果（布）"
+            "日本"
         ],
         "chapter": 1
-    },
-    {
-        "name": "Congo, The Democratic Republic of the",
-        "trans": [
-            "刚果（金）"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Costa Rica",
-        "trans": [
-            "哥斯达黎加"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Cote D'Ivoire",
-        "trans": [
-            "科特迪瓦"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Croatia",
-        "trans": [
-            "克罗地亚"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Cuba",
-        "trans": [
-            "古巴"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Curacao",
-        "trans": [
-            "库拉索"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Cyprus",
-        "trans": [
-            "塞浦路斯"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Czech Republic",
-        "trans": [
-            "捷克共和国"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Denmark",
-        "trans": [
-            "丹麦"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Djibouti",
-        "trans": [
-            "吉布提"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Dominica",
-        "trans": [
-            "多米尼克"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Dominican Republic",
-        "trans": [
-            "多米尼加共和国"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Ecuador",
-        "trans": [
-            "厄瓜多尔"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Egypt",
-        "trans": [
-            "埃及"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "El Salvador",
-        "trans": [
-            "萨尔瓦多"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Estonia",
-        "trans": [
-            "爱沙尼亚"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Ethiopia",
-        "trans": [
-            "埃塞俄比亚"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Fiji",
-        "trans": [
-            "斐济"
-        ],
-        "chapter": 5
-    },
-    {
-        "name": "Finland",
-        "trans": [
-            "芬兰"
-        ],
-        "chapter": 3
     },
     {
         "name": "France",
         "trans": [
             "法国"
         ],
-        "chapter": 3
-    },
-    {
-        "name": "Gambia",
-        "trans": [
-            "冈比亚"
-        ],
         "chapter": 1
-    },
-    {
-        "name": "Georgia",
-        "trans": [
-            "格鲁吉亚"
-        ],
-        "chapter": 2
     },
     {
         "name": "Germany",
         "trans": [
             "德国"
         ],
-        "chapter": 3
+        "chapter": 1
     },
     {
-        "name": "Ghana",
+        "name": "Russia",
         "trans": [
-            "加纳"
+            "俄罗斯"
         ],
         "chapter": 1
     },
     {
-        "name": "Greece",
+        "name": "India",
         "trans": [
-            "希腊"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Grenada",
-        "trans": [
-            "格林纳达"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Guatemala",
-        "trans": [
-            "危地马拉"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Guernsey",
-        "trans": [
-            "根西"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Guinea",
-        "trans": [
-            "几内亚"
+            "印度"
         ],
         "chapter": 1
     },
     {
-        "name": "Guinea-Bissau",
+        "name": "Italy",
         "trans": [
-            "几内亚比绍"
+            "意大利"
         ],
         "chapter": 1
     },
     {
-        "name": "Guyana",
+        "name": "Spain",
         "trans": [
-            "圭亚那"
+            "西班牙"
         ],
-        "chapter": 6
+        "chapter": 1
     },
     {
-        "name": "Haiti",
+        "name": "Brazil",
         "trans": [
-            "海地"
+            "巴西"
         ],
-        "chapter": 4
+        "chapter": 1
     },
     {
-        "name": "Honduras",
+        "name": "Singapore",
         "trans": [
-            "洪都拉斯"
+            "新加坡"
         ],
-        "chapter": 4
+        "chapter": 1
     },
     {
         "name": "Hong Kong",
         "trans": [
             "香港"
         ],
+        "chapter": 1
+    },
+    {
+        "name": "Malaysia",
+        "trans": [
+            "马来西亚"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Thailand",
+        "trans": [
+            "泰国"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Egypt",
+        "trans": [
+            "埃及"
+        ],
         "chapter": 2
     },
     {
-        "name": "Hungary",
+        "name": "South Africa",
         "trans": [
-            "匈牙利"
+            "南非"
         ],
-        "chapter": 3
+        "chapter": 2
     },
     {
-        "name": "Iceland",
+        "name": "Ireland",
         "trans": [
-            "冰岛"
+            "爱尔兰"
         ],
-        "chapter": 3
+        "chapter": 2
     },
     {
-        "name": "India",
+        "name": "Netherlands",
         "trans": [
-            "印度"
+            "荷兰"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Switzerland",
+        "trans": [
+            "瑞士"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Sweden",
+        "trans": [
+            "瑞典"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Greece",
+        "trans": [
+            "希腊"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Turkey",
+        "trans": [
+            "土耳其"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Mexico",
+        "trans": [
+            "墨西哥"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Argentina",
+        "trans": [
+            "阿根廷"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Viet Nam",
+        "trans": [
+            "越南"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Saudi Arabia",
+        "trans": [
+            "沙特阿拉伯"
         ],
         "chapter": 2
     },
@@ -490,9 +217,198 @@
         "chapter": 2
     },
     {
-        "name": "Iran, Islamic Republic of",
+        "name": "Philippines",
         "trans": [
-            "伊朗伊斯兰共和国"
+            "菲律宾"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Pakistan",
+        "trans": [
+            "巴基斯坦"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Nigeria",
+        "trans": [
+            "尼日利亚"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Iran",
+        "trans": [
+            "伊朗"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Austria",
+        "trans": [
+            "奥地利"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Belgium",
+        "trans": [
+            "比利时"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Norway",
+        "trans": [
+            "挪威"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Denmark",
+        "trans": [
+            "丹麦"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Finland",
+        "trans": [
+            "芬兰"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Portugal",
+        "trans": [
+            "葡萄牙"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Poland",
+        "trans": [
+            "波兰"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Ukraine",
+        "trans": [
+            "乌克兰"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Chile",
+        "trans": [
+            "智利"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Colombia",
+        "trans": [
+            "哥伦比亚"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Israel",
+        "trans": [
+            "以色列"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Qatar",
+        "trans": [
+            "卡塔尔"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Macao",
+        "trans": [
+            "澳门"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Cuba",
+        "trans": [
+            "古巴"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Jamaica",
+        "trans": [
+            "牙买加"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Kenya",
+        "trans": [
+            "肯尼亚"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Hungary",
+        "trans": [
+            "匈牙利"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Czech Republic",
+        "trans": [
+            "捷克共和国"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Peru",
+        "trans": [
+            "秘鲁"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Venezuela",
+        "trans": [
+            "委内瑞拉"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Romania",
+        "trans": [
+            "罗马尼亚"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Bangladesh",
+        "trans": [
+            "孟加拉国"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Morocco",
+        "trans": [
+            "摩洛哥"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Algeria",
+        "trans": [
+            "阿尔及利亚"
         ],
         "chapter": 2
     },
@@ -504,88 +420,200 @@
         "chapter": 2
     },
     {
-        "name": "Ireland",
+        "name": "Cambodia",
         "trans": [
-            "爱尔兰"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Isle of Man",
-        "trans": [
-            "马恩岛"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Israel",
-        "trans": [
-            "以色列"
+            "柬埔寨"
         ],
         "chapter": 2
     },
     {
-        "name": "Italy",
+        "name": "Sri Lanka",
         "trans": [
-            "意大利"
+            "斯里兰卡"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Myanmar",
+        "trans": [
+            "缅甸"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Nepal",
+        "trans": [
+            "尼泊尔"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Fiji",
+        "trans": [
+            "斐济"
         ],
         "chapter": 3
     },
     {
-        "name": "Jamaica",
+        "name": "Mongolia",
         "trans": [
-            "牙买加"
+            "蒙古"
         ],
-        "chapter": 4
+        "chapter": 3
     },
     {
-        "name": "Japan",
+        "name": "Croatia",
         "trans": [
-            "日本"
+            "克罗地亚"
         ],
-        "chapter": 2
+        "chapter": 3
     },
     {
-        "name": "Jordan",
+        "name": "Serbia",
         "trans": [
-            "约旦"
+            "塞尔维亚"
         ],
-        "chapter": 2
+        "chapter": 3
     },
     {
         "name": "Kazakhstan",
         "trans": [
             "哈萨克斯坦"
         ],
-        "chapter": 2
+        "chapter": 3
     },
     {
-        "name": "Kenya",
+        "name": "Ecuador",
         "trans": [
-            "肯尼亚"
+            "厄瓜多尔"
         ],
-        "chapter": 1
+        "chapter": 3
+    },
+    {
+        "name": "Ethiopia",
+        "trans": [
+            "埃塞俄比亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Tanzania",
+        "trans": [
+            "坦桑尼亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Armenia",
+        "trans": [
+            "亚美尼亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Azerbaijan",
+        "trans": [
+            "阿塞拜疆"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Bahrain",
+        "trans": [
+            "巴林"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Belarus",
+        "trans": [
+            "白俄罗斯"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Bhutan",
+        "trans": [
+            "不丹"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Bolivia",
+        "trans": [
+            "玻利维亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Bulgaria",
+        "trans": [
+            "保加利亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Cameroon",
+        "trans": [
+            "喀麦隆"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Costa Rica",
+        "trans": [
+            "哥斯达黎加"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Cyprus",
+        "trans": [
+            "塞浦路斯"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Estonia",
+        "trans": [
+            "爱沙尼亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Georgia",
+        "trans": [
+            "格鲁吉亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Ghana",
+        "trans": [
+            "加纳"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Iceland",
+        "trans": [
+            "冰岛"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Jordan",
+        "trans": [
+            "约旦"
+        ],
+        "chapter": 3
     },
     {
         "name": "Kuwait",
         "trans": [
             "科威特"
         ],
-        "chapter": 2
-    },
-    {
-        "name": "Kyrgyzstan",
-        "trans": [
-            "吉尔吉斯斯坦"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Lao People's Democratic Republic",
-        "trans": [
-            "老挝人民民主共和国"
-        ],
-        "chapter": 2
+        "chapter": 3
     },
     {
         "name": "Latvia",
@@ -599,28 +627,14 @@
         "trans": [
             "黎巴嫩"
         ],
-        "chapter": 2
-    },
-    {
-        "name": "Lesotho",
-        "trans": [
-            "莱索托"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Liberia",
-        "trans": [
-            "利比里亚"
-        ],
-        "chapter": 1
+        "chapter": 3
     },
     {
         "name": "Libya",
         "trans": [
             "利比亚"
         ],
-        "chapter": 1
+        "chapter": 3
     },
     {
         "name": "Lithuania",
@@ -637,46 +651,11 @@
         "chapter": 3
     },
     {
-        "name": "Macao",
-        "trans": [
-            "澳门"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Madagascar",
-        "trans": [
-            "马达加斯加"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Malawi",
-        "trans": [
-            "马拉维"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Malaysia",
-        "trans": [
-            "马来西亚"
-        ],
-        "chapter": 2
-    },
-    {
         "name": "Maldives",
         "trans": [
             "马尔代夫"
         ],
-        "chapter": 2
-    },
-    {
-        "name": "Mali",
-        "trans": [
-            "马里"
-        ],
-        "chapter": 1
+        "chapter": 3
     },
     {
         "name": "Malta",
@@ -686,95 +665,263 @@
         "chapter": 3
     },
     {
-        "name": "Mauritania",
-        "trans": [
-            "毛里塔尼亚"
-        ],
-        "chapter": 1
-    },
-    {
         "name": "Mauritius",
         "trans": [
             "毛里求斯"
         ],
-        "chapter": 1
+        "chapter": 3
     },
     {
-        "name": "Mexico",
+        "name": "Panama",
         "trans": [
-            "墨西哥"
+            "巴拿马"
         ],
         "chapter": 4
     },
     {
-        "name": "Moldova, Republic of",
+        "name": "Paraguay",
         "trans": [
-            "摩尔多瓦共和国"
+            "巴拉圭"
         ],
-        "chapter": 3
+        "chapter": 4
     },
     {
-        "name": "Mongolia",
+        "name": "Slovakia",
         "trans": [
-            "蒙古"
+            "斯洛伐克"
         ],
-        "chapter": 2
+        "chapter": 4
+    },
+    {
+        "name": "Slovenia",
+        "trans": [
+            "斯洛文尼亚"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Sudan",
+        "trans": [
+            "苏丹"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Tunisia",
+        "trans": [
+            "突尼斯"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Uganda",
+        "trans": [
+            "乌干达"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Uruguay",
+        "trans": [
+            "乌拉圭"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Uzbekistan",
+        "trans": [
+            "乌兹别克斯坦"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Yemen",
+        "trans": [
+            "也门"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Zambia",
+        "trans": [
+            "赞比亚"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Zimbabwe",
+        "trans": [
+            "津巴布韦"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Benin",
+        "trans": [
+            "贝宁"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Burundi",
+        "trans": [
+            "布隆迪"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Cayman Islands",
+        "trans": [
+            "开曼群岛"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Chad",
+        "trans": [
+            "乍得"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Comoros",
+        "trans": [
+            "科摩罗"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Congo",
+        "trans": [
+            "刚果（布）"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Curacao",
+        "trans": [
+            "库拉索"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Djibouti",
+        "trans": [
+            "吉布提"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Dominica",
+        "trans": [
+            "多米尼克"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Gambia",
+        "trans": [
+            "冈比亚"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Grenada",
+        "trans": [
+            "格林纳达"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Guinea",
+        "trans": [
+            "几内亚"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Haiti",
+        "trans": [
+            "海地"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Honduras",
+        "trans": [
+            "洪都拉斯"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Kyrgyzstan",
+        "trans": [
+            "吉尔吉斯斯坦"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Lesotho",
+        "trans": [
+            "莱索托"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Liberia",
+        "trans": [
+            "利比里亚"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Madagascar",
+        "trans": [
+            "马达加斯加"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Malawi",
+        "trans": [
+            "马拉维"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Mauritania",
+        "trans": [
+            "毛里塔尼亚"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Moldova",
+        "trans": [
+            "摩尔多瓦"
+        ],
+        "chapter": 4
     },
     {
         "name": "Montenegro",
         "trans": [
             "黑山"
         ],
-        "chapter": 3
-    },
-    {
-        "name": "Morocco",
-        "trans": [
-            "摩洛哥"
-        ],
-        "chapter": 1
+        "chapter": 4
     },
     {
         "name": "Mozambique",
         "trans": [
             "莫桑比克"
         ],
-        "chapter": 1
-    },
-    {
-        "name": "Myanmar",
-        "trans": [
-            "缅甸"
-        ],
-        "chapter": 2
+        "chapter": 4
     },
     {
         "name": "Namibia",
         "trans": [
             "纳米比亚"
         ],
-        "chapter": 1
-    },
-    {
-        "name": "Nepal",
-        "trans": [
-            "尼泊尔"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Netherlands",
-        "trans": [
-            "荷兰"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "New Zealand",
-        "trans": [
-            "新西兰"
-        ],
-        "chapter": 5
+        "chapter": 4
     },
     {
         "name": "Nicaragua",
@@ -788,138 +935,26 @@
         "trans": [
             "尼日尔"
         ],
-        "chapter": 1
-    },
-    {
-        "name": "Nigeria",
-        "trans": [
-            "尼日利亚"
-        ],
-        "chapter": 1
+        "chapter": 4
     },
     {
         "name": "North Macedonia",
         "trans": [
             "北马其顿"
         ],
-        "chapter": 3
-    },
-    {
-        "name": "Norway",
-        "trans": [
-            "挪威"
-        ],
-        "chapter": 3
+        "chapter": 4
     },
     {
         "name": "Oman",
         "trans": [
             "阿曼"
         ],
-        "chapter": 2
-    },
-    {
-        "name": "Pakistan",
-        "trans": [
-            "巴基斯坦"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Palestinian Territory, Occupied",
-        "trans": [
-            "巴勒斯坦被占领土"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Panama",
-        "trans": [
-            "巴拿马"
-        ],
         "chapter": 4
-    },
-    {
-        "name": "Papua New Guinea",
-        "trans": [
-            "巴布亚新几内亚"
-        ],
-        "chapter": 5
-    },
-    {
-        "name": "Paraguay",
-        "trans": [
-            "巴拉圭"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Peru",
-        "trans": [
-            "秘鲁"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Philippines",
-        "trans": [
-            "菲律宾"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Poland",
-        "trans": [
-            "波兰"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Portugal",
-        "trans": [
-            "葡萄牙"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Qatar",
-        "trans": [
-            "卡塔尔"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Romania",
-        "trans": [
-            "罗马尼亚"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Russian Federation",
-        "trans": [
-            "俄罗斯联邦"
-        ],
-        "chapter": 3
     },
     {
         "name": "Rwanda",
         "trans": [
             "卢旺达"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Saint Kitts and Nevis",
-        "trans": [
-            "圣基茨和尼维斯"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Saint Lucia",
-        "trans": [
-            "圣卢西亚"
         ],
         "chapter": 4
     },
@@ -931,13 +966,6 @@
         "chapter": 4
     },
     {
-        "name": "Saint Vincent and the Grenadines",
-        "trans": [
-            "圣文森特和格林纳丁斯"
-        ],
-        "chapter": 4
-    },
-    {
         "name": "Samoa",
         "trans": [
             "萨摩亚"
@@ -945,165 +973,53 @@
         "chapter": 5
     },
     {
-        "name": "Sao Tome and Principe",
-        "trans": [
-            "圣多美和普林西比"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Saudi Arabia",
-        "trans": [
-            "沙特阿拉伯"
-        ],
-        "chapter": 2
-    },
-    {
         "name": "Senegal",
         "trans": [
             "塞内加尔"
         ],
-        "chapter": 1
-    },
-    {
-        "name": "Serbia",
-        "trans": [
-            "塞尔维亚"
-        ],
-        "chapter": 3
+        "chapter": 5
     },
     {
         "name": "Seychelles",
         "trans": [
             "塞舌尔"
         ],
-        "chapter": 1
+        "chapter": 5
     },
     {
         "name": "Sierra Leone",
         "trans": [
             "塞拉利昂"
         ],
-        "chapter": 1
-    },
-    {
-        "name": "Singapore",
-        "trans": [
-            "新加坡"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Slovakia",
-        "trans": [
-            "斯洛伐克"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Slovenia",
-        "trans": [
-            "斯洛文尼亚"
-        ],
-        "chapter": 3
+        "chapter": 5
     },
     {
         "name": "Somalia",
         "trans": [
             "索马里"
         ],
-        "chapter": 1
-    },
-    {
-        "name": "South Africa",
-        "trans": [
-            "南非"
-        ],
-        "chapter": 1
+        "chapter": 5
     },
     {
         "name": "South Sudan",
         "trans": [
             "南苏丹"
         ],
-        "chapter": 1
-    },
-    {
-        "name": "Spain",
-        "trans": [
-            "西班牙"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Sri Lanka",
-        "trans": [
-            "斯里兰卡"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Sudan",
-        "trans": [
-            "苏丹"
-        ],
-        "chapter": 1
+        "chapter": 5
     },
     {
         "name": "Suriname",
         "trans": [
             "苏里南"
         ],
-        "chapter": 6
-    },
-    {
-        "name": "Sweden",
-        "trans": [
-            "瑞典"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Switzerland",
-        "trans": [
-            "瑞士"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "Syrian Arab Republic",
-        "trans": [
-            "阿拉伯叙利亚共和国"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Taiwan, China",
-        "trans": [
-            "中国台湾"
-        ],
-        "chapter": 2
+        "chapter": 5
     },
     {
         "name": "Tajikistan",
         "trans": [
             "塔吉克斯坦"
         ],
-        "chapter": 2
-    },
-    {
-        "name": "Tanzania, United Republic of",
-        "trans": [
-            "坦桑尼亚联合共和国"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Thailand",
-        "trans": [
-            "泰国"
-        ],
-        "chapter": 2
+        "chapter": 5
     },
     {
         "name": "Timor-Leste",
@@ -1117,7 +1033,7 @@
         "trans": [
             "多哥"
         ],
-        "chapter": 1
+        "chapter": 5
     },
     {
         "name": "Tonga",
@@ -1127,115 +1043,10 @@
         "chapter": 5
     },
     {
-        "name": "Trinidad and Tobago",
-        "trans": [
-            "特立尼达和多巴哥"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Tunisia",
-        "trans": [
-            "突尼斯"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Turkey",
-        "trans": [
-            "土耳其"
-        ],
-        "chapter": 2
-    },
-    {
         "name": "Turkmenistan",
         "trans": [
             "土库曼斯坦"
         ],
-        "chapter": 2
-    },
-    {
-        "name": "Uganda",
-        "trans": [
-            "乌干达"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Ukraine",
-        "trans": [
-            "乌克兰"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "United Arab Emirates",
-        "trans": [
-            "阿拉伯联合酋长国"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "United Kingdom",
-        "trans": [
-            "英国"
-        ],
-        "chapter": 3
-    },
-    {
-        "name": "United States",
-        "trans": [
-            "美国"
-        ],
-        "chapter": 4
-    },
-    {
-        "name": "Uruguay",
-        "trans": [
-            "乌拉圭"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Uzbekistan",
-        "trans": [
-            "乌兹别克斯坦"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Venezuela",
-        "trans": [
-            "委内瑞拉"
-        ],
-        "chapter": 6
-    },
-    {
-        "name": "Viet Nam",
-        "trans": [
-            "越南"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Yemen",
-        "trans": [
-            "也门"
-        ],
-        "chapter": 2
-    },
-    {
-        "name": "Zambia",
-        "trans": [
-            "赞比亚"
-        ],
-        "chapter": 1
-    },
-    {
-        "name": "Zimbabwe",
-        "trans": [
-            "津巴布韦"
-        ],
-        "chapter": 1
+        "chapter": 5
     }
 ]
