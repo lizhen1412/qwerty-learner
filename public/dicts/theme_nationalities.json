@@ -1,0 +1,247 @@
+[
+    {
+        "name": "European",
+        "trans": [
+            "欧洲的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "German",
+        "trans": [
+            "德国的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Italian",
+        "trans": [
+            "意大利的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Indian",
+        "trans": [
+            "印度的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Korean",
+        "trans": [
+            "韩国的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Australian",
+        "trans": [
+            "澳大利亚的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "American",
+        "trans": [
+            "美国的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Canadian",
+        "trans": [
+            "加拿大的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Russian",
+        "trans": [
+            "俄罗斯的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Brazilian",
+        "trans": [
+            "巴西的"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Chinese",
+        "trans": [
+            "中国的"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Japanese",
+        "trans": [
+            "日本的"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Vietnamese",
+        "trans": [
+            "越南的"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Portuguese",
+        "trans": [
+            "葡萄牙的"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Taiwanese",
+        "trans": [
+            "台湾的"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "British",
+        "trans": [
+            "英国的"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Polish",
+        "trans": [
+            "波兰的"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Swedish",
+        "trans": [
+            "瑞典的"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Turkish",
+        "trans": [
+            "土耳其的"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Spanish",
+        "trans": [
+            "西班牙的"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Danish",
+        "trans": [
+            "丹麦的"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Finnish",
+        "trans": [
+            "芬兰的"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Iraqi",
+        "trans": [
+            "伊拉克的"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Pakistani",
+        "trans": [
+            "巴基斯坦的"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Israeli",
+        "trans": [
+            "以色列的"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Kuwaiti",
+        "trans": [
+            "科威特的"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Arabic",
+        "trans": [
+            "阿拉伯的"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Icelandic",
+        "trans": [
+            "冰岛的"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "French",
+        "trans": [
+            "法国的"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Dutch",
+        "trans": [
+            "荷兰的"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Greek",
+        "trans": [
+            "希腊的"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Thai",
+        "trans": [
+            "泰国的"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Irish",
+        "trans": [
+            "爱尔兰的"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Welsh",
+        "trans": [
+            "威尔士的"
+        ],
+        "chapter": 6
+    },
+    {
+        "name": "Scottish",
+        "trans": [
+            "苏格兰的"
+        ],
+        "chapter": 6
+    }
+]

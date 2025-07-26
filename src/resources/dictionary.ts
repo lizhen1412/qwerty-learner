@@ -4211,6 +4211,17 @@ const themeDicts: DictionaryResource[] = [
     language: 'en',
     languageCategory: 'en',
   },
+  {
+    id: 'theme_nationalities_en_45',
+    name: '常见国籍',
+    description: '雅思听力考试中常见的国籍词汇，按后缀分类',
+    category: '自定义主题',
+    tags: ['根据主题'],
+    url: '/dicts/theme_nationalities.json',
+    length: 45,
+    language: 'en',
+    languageCategory: 'en',
+  },
 ]
 
 /**
