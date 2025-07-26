@@ -1,0 +1,261 @@
+[
+    {
+        "name": "United Kingdom",
+        "trans": [
+            "英国"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "U.K.",
+        "trans": [
+            "英国"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Great Britain",
+        "trans": [
+            "大不列颠"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "England",
+        "trans": [
+            "英格兰"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Scotland",
+        "trans": [
+            "苏格兰"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "North Ireland",
+        "trans": [
+            "北爱尔兰"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Wales",
+        "trans": [
+            "威尔士"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "London",
+        "trans": [
+            "伦敦"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Manchester",
+        "trans": [
+            "曼彻斯特"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Edinburgh",
+        "trans": [
+            "爱丁堡"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "United States",
+        "trans": [
+            "美国"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "U.S.A.",
+        "trans": [
+            "美国"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Los Angeles",
+        "trans": [
+            "洛杉矶"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "L.A.",
+        "trans": [
+            "洛杉矶"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "New York",
+        "trans": [
+            "纽约"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Seattle",
+        "trans": [
+            "西雅图"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Washington",
+        "trans": [
+            "华盛顿"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Boston",
+        "trans": [
+            "波士顿"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Chicago",
+        "trans": [
+            "芝加哥"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Australia",
+        "trans": [
+            "澳大利亚"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "New South Wales",
+        "trans": [
+            "新南威尔士州"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Queensland",
+        "trans": [
+            "昆士兰州"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Melbourne",
+        "trans": [
+            "墨尔本"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Sydney",
+        "trans": [
+            "悉尼"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Canberra",
+        "trans": [
+            "堪培拉"
+        ],
+        "chapter": 3
+    },
+    {
+        "name": "Canada",
+        "trans": [
+            "加拿大"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Montreal",
+        "trans": [
+            "蒙特利尔"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Toronto",
+        "trans": [
+            "多伦多"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Ottawa",
+        "trans": [
+            "渥太华"
+        ],
+        "chapter": 4
+    },
+    {
+        "name": "Singapore",
+        "trans": [
+            "新加坡"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "France",
+        "trans": [
+            "法国"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Germany",
+        "trans": [
+            "德国"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Thailand",
+        "trans": [
+            "泰国"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Switzerland",
+        "trans": [
+            "瑞士"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Sweden",
+        "trans": [
+            "瑞典"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "The Netherlands",
+        "trans": [
+            "荷兰"
+        ],
+        "chapter": 5
+    },
+    {
+        "name": "Holland",
+        "trans": [
+            "荷兰"
+        ],
+        "chapter": 5
+    }
+]

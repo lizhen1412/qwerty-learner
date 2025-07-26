@@ -1,0 +1,233 @@
+[
+    {
+        "name": "Ann",
+        "trans": [
+            "安"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Alice",
+        "trans": [
+            "爱丽丝"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Lucy",
+        "trans": [
+            "露西"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Betty",
+        "trans": [
+            "贝蒂"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Mary",
+        "trans": [
+            "玛丽"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Helen",
+        "trans": [
+            "海伦"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Kate",
+        "trans": [
+            "凯特"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Rose",
+        "trans": [
+            "罗斯"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Nancy",
+        "trans": [
+            "南希"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Lily",
+        "trans": [
+            "莉莉"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Julie",
+        "trans": [
+            "朱莉"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Laura",
+        "trans": [
+            "劳拉"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Catherine",
+        "trans": [
+            "凯瑟琳"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Christina",
+        "trans": [
+            "克里斯蒂娜"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Katherine",
+        "trans": [
+            "凯瑟琳"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Jennifer",
+        "trans": [
+            "詹妮弗"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Michelle",
+        "trans": [
+            "米歇尔"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Rachel",
+        "trans": [
+            "雷切尔"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Sam",
+        "trans": [
+            "山姆"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "John",
+        "trans": [
+            "约翰"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Mike",
+        "trans": [
+            "迈克"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Frank",
+        "trans": [
+            "弗兰克"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Henry",
+        "trans": [
+            "亨利"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Robert",
+        "trans": [
+            "罗伯特"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Richard",
+        "trans": [
+            "理查德"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Johnson",
+        "trans": [
+            "约翰逊"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Tom",
+        "trans": [
+            "汤姆"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Jeffrey",
+        "trans": [
+            "杰弗里"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Victor",
+        "trans": [
+            "维克多"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Charles",
+        "trans": [
+            "查尔斯"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Edward",
+        "trans": [
+            "爱德华"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Thomas",
+        "trans": [
+            "托马斯"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Steven",
+        "trans": [
+            "史蒂文"
+        ],
+        "chapter": 2
+    }
+]

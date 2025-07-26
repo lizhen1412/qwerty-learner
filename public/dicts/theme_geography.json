@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Asia",
+        "trans": [
+            "亚洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Europe",
+        "trans": [
+            "欧洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Africa",
+        "trans": [
+            "非洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "North America",
+        "trans": [
+            "北美洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Latin America",
+        "trans": [
+            "拉丁美洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Antarctica",
+        "trans": [
+            "南极洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Oceania",
+        "trans": [
+            "大洋洲"
+        ],
+        "chapter": 1
+    },
+    {
+        "name": "Pacific Ocean",
+        "trans": [
+            "太平洋"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Atlantic Ocean",
+        "trans": [
+            "大西洋"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Indian Ocean",
+        "trans": [
+            "印度洋"
+        ],
+        "chapter": 2
+    },
+    {
+        "name": "Arctic Ocean",
+        "trans": [
+            "北冰洋"
+        ],
+        "chapter": 2
+    }
+]
