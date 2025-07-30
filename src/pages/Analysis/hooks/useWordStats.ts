@@ -127,5 +127,14 @@ async function getChapterStats(startTimeStamp: number, endTimeStamp: number): Pr
     }
   })
 
+  // 检查是否有有效的练习数据
+  const hasValidExerciseData = exerciseRecord.some((record) => record.count > 0)
+  const hasValidWordData = wordRecord.some((record) => record.count > 0)
+
+  // 如果没有任何有效数据，设置 isEmpty 为 true
+  if (!hasValidExerciseData && !hasValidWordData && wpmRecord.length === 0 && accuracyRecord.length === 0 && wrongTimeRecord.length === 0) {
+    return { isEmpty: true, exerciseRecord: [], wordRecord: [], wpmRecord: [], accuracyRecord: [], wrongTimeRecord: [] }
+  }
+
   return { exerciseRecord, wordRecord, wpmRecord, accuracyRecord, wrongTimeRecord }
 }

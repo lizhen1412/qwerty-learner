@@ -7,13 +7,29 @@ import ActivityCalendar from 'react-activity-calendar'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 
+/**
+ * 热力图组件
+ * 使用 react-activity-calendar 组件，参考 https://github.com/d3/d3-scale-chromatic
+ * 使用 react-tooltip 组件，参考 https://github.com/wwayne/react-tooltip
+ * 使用 jotai 管理状态，使用 react 管理组件，使用 typescript 管理类型，使用 tailwindcss 管理样式，使用 react-tooltip 管理提示
+ */
 interface HeatmapChartsProps {
-  title: string
-  data: Activity[]
+  title: string // 标题
+  data: Activity[] // 数据
 }
 
 const HeatmapCharts: FC<HeatmapChartsProps> = ({ data, title }) => {
   const [isOpenDarkMode] = useAtom(isOpenDarkModeAtom)
+
+  // 检查数据是否为空
+  if (!data || data.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center">
+        <div className="text-center text-xl font-bold text-gray-600	dark:text-white">{title}</div>
+        <div className="mt-4 text-center text-gray-400">暂无数据</div>
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col items-center justify-center">
