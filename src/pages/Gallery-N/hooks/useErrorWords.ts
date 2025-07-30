@@ -60,9 +60,22 @@ export default function useErrorWordData(dict: Dictionary, reload: boolean) {
           const word = wordList.find((word) => word.name === groupRecord.word)
           if (!word) return
 
+          // 对 word.trans 做兜底处理，确保它始终是一个数组
+          let trans: string[]
+          if (Array.isArray(word.trans)) {
+            trans = word.trans.filter((item) => typeof item === 'string')
+          } else if (word.trans === null || word.trans === undefined || typeof word.trans === 'object') {
+            trans = []
+          } else {
+            trans = [String(word.trans)]
+          }
+
           const errorData: TErrorWordData = {
             word: groupRecord.word,
-            originData: word,
+            originData: {
+              ...word,
+              trans,
+            },
             errorCount: groupRecord.records.reduce((acc, cur) => {
               acc += cur.wrongCount
               return acc

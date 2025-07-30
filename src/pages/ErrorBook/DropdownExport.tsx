@@ -60,7 +60,18 @@ const DropdownExport: FC<DropdownProps> = ({ renderRecords }) => {
         if (dictInfo?.url && dictDataMap.has(dictInfo.url)) {
           const wordList = dictDataMap.get(dictInfo.url) || []
           const word = wordList.find((w: any) => w.name === item.word)
-          translation = word ? word.trans.join('；') : ''
+          if (word) {
+            // 对 word.trans 做兜底处理，确保它始终是一个数组
+            let trans: string[]
+            if (Array.isArray(word.trans)) {
+              trans = word.trans.filter((item) => typeof item === 'string')
+            } else if (word.trans === null || word.trans === undefined || typeof word.trans === 'object') {
+              trans = []
+            } else {
+              trans = [String(word.trans)]
+            }
+            translation = trans.join('；')
+          }
         }
 
         ExportData.push({
