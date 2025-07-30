@@ -9,8 +9,8 @@ import { useEffect, useMemo, useState } from 'react'
 import useSound from 'use-sound'
 import type { HookOptions } from 'use-sound/dist/types'
 
-// 在开发环境中使用代理，生产环境中使用原始URL
-const pronunciationApi = import.meta.env.DEV ? '/dictvoice?audio=' : 'https://dict.youdao.com/dictvoice?audio='
+// 统一使用代理，避免CORS问题
+const pronunciationApi = '/dictvoice?audio='
 
 export function generateWordSoundSrc(word: string, pronunciation: Exclude<PronunciationType, false>): string {
   switch (pronunciation) {
