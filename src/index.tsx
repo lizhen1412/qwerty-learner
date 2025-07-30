@@ -5,7 +5,6 @@ import { FriendLinks } from './pages/FriendLinks'
 import MobilePage from './pages/Mobile'
 import TypingPage from './pages/Typing'
 import { isOpenDarkModeAtom } from '@/store'
-import { Analytics } from '@vercel/analytics/react'
 import 'animate.css'
 import { useAtomValue } from 'jotai'
 import mixpanel from 'mixpanel-browser'
@@ -68,7 +67,12 @@ function Root() {
           </Routes>
         </Suspense>
       </BrowserRouter>
-      <Analytics />
+      {/* 只在 Vercel 环境中加载 Analytics */}
+      {process.env.NODE_ENV === 'production' && process.env.REACT_APP_DEPLOY_ENV === 'vercel' && (
+        <Suspense fallback={null}>
+          {React.createElement(lazy(() => import('@vercel/analytics/react').then((module) => ({ default: module.Analytics }))))}
+        </Suspense>
+      )}
     </React.StrictMode>
   )
 }
