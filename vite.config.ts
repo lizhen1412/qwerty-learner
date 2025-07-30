@@ -28,6 +28,15 @@ export default defineConfig(async ({ mode }) => {
         },
       }),
     ],
+    server: {
+      proxy: {
+        '/dictvoice': {
+          target: 'https://dict.youdao.com',
+          changeOrigin: true,
+          secure: false,
+        },
+      },
+    },
     build: {
       minify: true,
       outDir: 'build',

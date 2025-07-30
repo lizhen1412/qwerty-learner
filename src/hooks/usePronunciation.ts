@@ -9,7 +9,9 @@ import { useEffect, useMemo, useState } from 'react'
 import useSound from 'use-sound'
 import type { HookOptions } from 'use-sound/dist/types'
 
-const pronunciationApi = 'https://dict.youdao.com/dictvoice?audio='
+// 在开发环境中使用代理，生产环境中使用原始URL
+const pronunciationApi = import.meta.env.DEV ? '/dictvoice?audio=' : 'https://dict.youdao.com/dictvoice?audio='
+
 export function generateWordSoundSrc(word: string, pronunciation: Exclude<PronunciationType, false>): string {
   switch (pronunciation) {
     case 'uk':
